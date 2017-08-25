@@ -1,23 +1,25 @@
 function curry(func){
-  var args = [];
-
-  function myfunc(){
-    if(args.length >= 6){
-      args.splice(0, args.length);
-    }
-    for(i in arguments){
+  function callback(){
+    
+    for(var i = 0,args = []; i < arguments.length; i++){
       args.push(arguments[i]);
     }
-    var len = args.length;
-    if(len<6){
+    
+    if(arguments.length < add.length){
       
-      return myfunc;
+      return function (){
+        for(var i = 0,args2 = []; i < arguments.length; i++){
+          args2.push(arguments[i]);
+        }
+        return callback.apply(undefined, [].concat(args,args2));
+      }
     }
-    return add(args[0], args[1], args[2], args[3], args[4], args[5]) ;
+
+    return add.apply(undefined,args) ;
   };
 
 
-  return myfunc;
+  return callback;
 }
 
 function add(a, b, c, d, e, f){
