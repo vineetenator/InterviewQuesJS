@@ -1,0 +1,70 @@
+//
+// Dedicated to SASS global function & mixins
+// --------------------------------------------------
+
+@function rem($px){
+  @if unitless($px) {$px : 1px * $px;}
+  @return ($px/$baseFontSize)+rem;;
+}
+
+@mixin responsive($minWidth) {
+    @media only screen and (min-width: $minWidth) {
+        @content;
+    }
+}
+
+// mixin rules for PC & tablets only
+@mixin tab-pc-view{
+    @media only screen and (min-width: $xs-width) {
+        @content;
+    }
+}
+
+// mixin rules for mobile only
+@mixin mobile-view{
+    @media only screen and (max-width: $xs-width - 1px) {
+        @content;
+    }
+}
+
+@mixin landscape{
+    @media (orientation : landscape){
+        @content;
+    }
+}
+
+@mixin portrait{
+    @media (orientation : portrait){
+        @content;
+    }
+}
+
+// Left Rigth Margin
+@mixin lr-margin($val){
+  margin-left:  $val;
+  margin-right: $val;
+}
+
+// Left Rigth padding
+@mixin lr-padding($val){
+  padding:{
+    left:  $val;
+	  right: $val;
+  }
+}
+
+// Box shadow for all browser will list all the args
+@mixin tb-border($arguments) {
+  border: {
+    bottom: $arguments;
+    top:    $arguments;
+  }
+}
+
+@mixin lr-border($arguments) {
+  border:{
+    left:  $arguments;
+    right: $arguments;
+  }
+}
+

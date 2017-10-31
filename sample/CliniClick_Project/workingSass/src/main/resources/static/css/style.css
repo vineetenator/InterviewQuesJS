@@ -1,0 +1,186 @@
+html, :root {
+  font-size: 16px;
+}
+
+@-ms-viewport {
+  width: auto !important;
+}
+body {
+  color: #323131;
+  background: #f4f4f4;
+}
+
+.dash::before,
+.pincode::before {
+  content: "\2002 \2013 \2002";
+}
+
+.hypen::before {
+  content: "\2002 \2010 \2002";
+}
+
+.dr-profile {
+  background: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 8px;
+  padding-bottom: 15px;
+}
+.dr-profile .profile-pic {
+  margin-top: 5px;
+}
+@media only screen and (min-width: 768px) {
+  .dr-profile .profile-pic {
+    width: 165px;
+    height: 165px;
+  }
+}
+.dr-profile .profile-pic img {
+  width: 100%;
+  height: 100%;
+}
+.dr-profile .right-panel h1 {
+  margin-top: 0;
+}
+.dr-profile .right-panel .clinic-name,
+.dr-profile .right-panel address {
+  color: #666666;
+}
+.dr-profile .right-panel .clinic-name {
+  font-size: 1rem;
+}
+.dr-profile .right-panel .clinic-area {
+  margin-top: 15px;
+  font-size: 1rem;
+}
+.dr-profile .right-panel .txt-msg {
+  width: 200px;
+  background: #99cc30;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  color: white;
+}
+.dr-profile .right-panel .txt-msg, .dr-profile .right-panel .txt-msg span {
+  display: inline-block;
+}
+.dr-profile .right-panel .txt-msg:hover {
+  background: #89bc20;
+}
+.dr-profile .right-panel .txt-msg span:first-child {
+  width: 40px;
+  line-height: 31px;
+  font-size: 0.5rem;
+  background: #689709;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  vertical-align: top;
+}
+.dr-profile .right-panel .txt-msg span:first-child i {
+  vertical-align: sub;
+}
+.dr-profile .right-panel .txt-msg span:last-child {
+  width: 156px;
+  vertical-align: middle;
+}
+.dr-profile .profile-nav {
+  margin-top: 20px;
+  background: #f8f8f8;
+}
+.dr-profile .profile-nav .nav {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .dr-profile .profile-nav .nav li {
+    min-width: 110px;
+  }
+  .dr-profile .profile-nav .nav li:nth-of-type(3n+1) {
+    clear: both;
+  }
+}
+.dr-profile .profile-nav .nav-tabs > li.active > a,
+.dr-profile .profile-nav .nav-tabs > li.active > a:focus,
+.dr-profile .profile-nav .nav-tabs > li.active > a:hover {
+  color: #99cc30;
+  border-radius: 0;
+  border-top: 3px solid #99cc30;
+}
+.dr-profile .main .about-dr {
+  list-style: none;
+  padding: 0;
+  color: #666666;
+}
+.dr-profile .info-box {
+  margin-bottom: 15px;
+  border: 1px solid #e4e4e4;
+}
+.dr-profile .info-box .info-box-head,
+.dr-profile .info-box .info-box-body {
+  padding: 10px 15px;
+}
+.dr-profile .info-box .info-box-head {
+  margin: 0;
+  padding-left: 0;
+  background: #f8f8f8;
+  border-bottom: 1px solid #e4e4e4;
+}
+.dr-profile .info-box .info-box-head span {
+  border-bottom: 3px solid #99cc30;
+  padding-bottom: 7px;
+  padding-right: 5px;
+  padding-left: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .dr-profile .info-box .info-box-head {
+    font-size: 1.3125rem;
+  }
+}
+.dr-profile .info-box .info-box-body {
+  color: #666666;
+}
+.dr-profile .info-box ul.info-box-body {
+  padding-left: 40px;
+}
+.dr-profile .info-box ul.info-box-body li {
+  padding-right: 25px;
+}
+.dr-profile .info-box ul.info-box-body.two-cols li {
+  float: left;
+  width: 50%;
+}
+.dr-profile .info-box ul.info-box-body.two-cols li:nth-of-type(odd) {
+  clear: both;
+}
+.dr-profile .info-box ul.info-box-body.three-cols li {
+  float: left;
+  width: 33.33%;
+}
+.dr-profile .info-box ul.info-box-body.three-cols li:nth-of-type(3n+1) {
+  clear: both;
+}
+@media only screen and (max-width: 767px) {
+  .dr-profile .info-box ul.info-box-body.two-cols li, .dr-profile .info-box ul.info-box-body.three-cols li {
+    width: 100%;
+    float: none;
+    clear: both;
+  }
+}
+.dr-profile .info-box .fa {
+  color: #99cc30;
+  padding-right: 8px;
+  font-size: 1.5625rem;
+}
+
+.clinic-scss-example {
+  width: 100px;
+  font-size: 1.875rem;
+  color: red;
+}
+@media only screen and (max-width: 767px) {
+  .clinic-scss-example {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

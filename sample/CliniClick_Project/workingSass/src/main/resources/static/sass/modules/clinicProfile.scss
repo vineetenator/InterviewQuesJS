@@ -1,0 +1,9 @@
+.clinic-scss-example{
+  width: 100px;
+  font-size: rem(30px);
+  @include mobile-view{
+    @include lr-padding(30px);
+  }
+  color: red;
+}
+

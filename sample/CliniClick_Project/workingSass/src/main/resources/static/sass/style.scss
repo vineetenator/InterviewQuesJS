@@ -1,0 +1,13 @@
+//
+// Load core variables and mixins
+// --------------------------------------------------
+
+@import "variables.scss";
+@import "palette.scss";
+@import "mixins.scss";
+@import "common.scss";
+
+
+// modules
+@import "modules/doctorProfile.scss";
+@import "modules/clinicProfile.scss";

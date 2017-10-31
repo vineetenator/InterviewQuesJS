@@ -1,0 +1,9 @@
+.featured-clinic {
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+.appointment:hover {
+    content: 'Book Appointment'
+}
+

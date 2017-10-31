@@ -1,0 +1,22 @@
+{
+	"name": "cliniclick",
+	"version": "1.0.1",
+	"description": "CliniClick Grunt and Sass",
+	"private": true,
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "grunt",
+		"gwatch": "grunt watch"
+	},
+	"author": "Vineet Arya",
+	"license": "MIT",
+	"devDependencies": {
+		"grunt": "~0.4.5",
+		"grunt-contrib-sass": "latest",
+		"grunt-postcss": "latest",
+		"autoprefixer": "latest",
+		"grunt-contrib-cssmin": "latest",
+		"grunt-contrib-uglify": "latest",
+		"grunt-contrib-watch": "latest"
+	}
+}

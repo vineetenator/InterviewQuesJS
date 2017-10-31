@@ -1,0 +1,163 @@
+.dr-profile{
+	background: @containerBG;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 8px;
+    padding-bottom: 15px;
+	.profile-pic{
+		margin-top: 5px;
+
+		.tab-pc-screen({
+			@size: 	165px;
+			width: 	@size;
+			height: @size;
+		});
+		
+		img{
+			width: 	100%;
+    		height: 100%;
+		}
+	}
+	.right-panel{
+		h1{
+			margin-top: 0;
+		}
+		.clinic-name,
+		address{
+			color: @secondLevelText;
+		}
+		.clinic-name{
+			.font-size(16);
+		}
+		.clinic-area{
+			margin-top: 15px;
+			.font-size(16);
+		}
+
+		.txt-msg{
+			width: 200px;
+		    background: @lightGreen;
+		    border-radius: 5px;
+		    text-align: center;
+		    line-height: 30px;
+		    text-decoration: none;
+		    color: white;
+		    &, span{
+		    	display: inline-block;
+		    }
+		    &:hover{
+		    	background: @lightGreen - @hover;
+		    };
+		    span:first-child{
+		    	@radius: 3px;
+			    width: 40px;
+			    line-height: 31px;
+			    font-size: 8px;
+			    background: @algaeGreen;
+			    border-top-left-radius: @radius;
+			    border-bottom-left-radius: @radius;
+			    vertical-align: top;
+			    i{
+		    	    vertical-align: sub;
+			    }
+		    }
+		    span:last-child{
+		    	width: 156px;
+	    		vertical-align: middle;
+		    }
+		}
+	}
+
+	.profile-nav{
+		margin-top: 20px;
+		background: @headingBg;
+		.nav{
+			.left-right-padding(15px);
+			.mobile-screen({
+				li{
+					min-width: 110px;
+					&:nth-of-type(3n+1) {
+				    	clear: both;
+				    }
+				}
+			});
+		}
+
+		.nav-tabs>li.active>a, 
+		.nav-tabs>li.active>a:focus, 
+		.nav-tabs>li.active>a:hover{
+			color: @lightGreenText;
+			border-radius: 0;
+			border-top: 3px solid @lightGreenBorder;   
+		}
+	}
+
+	.main{
+		.about-dr {
+		    list-style: none;
+		    padding: 0;
+		    color: @secondLevelText;
+		}
+	}
+	
+	.info-box{
+		margin-bottom: 15px;
+		border: 1px solid @lightGreyBorder;
+		.info-box-head,
+		.info-box-body{
+			padding: 10px 15px;
+		}
+
+		.info-box-head{
+			margin: 0;
+			padding-left: 0;
+			background: @headingBg;
+			border-bottom: 1px solid @lightGreyBorder;
+			span{
+				border-bottom: 3px solid @lightGreen;
+    			padding-bottom: 7px;
+			    padding-right: 5px;
+    			padding-left: 15px;
+			}
+			.mobile-screen({
+				.font-size(21);
+			});
+		}
+		.info-box-body{
+			color: @secondLevelText;
+		}
+		ul.info-box-body{
+			padding-left: 40px;
+			li{
+				padding-right: 25px;
+			}
+			&.two-cols li {
+				float: left;
+			    width: 50%;
+			    &:nth-of-type(odd) {
+				    clear: both;
+				}
+			}
+			&.three-cols li {
+				float: left;
+			    width: 33.33%;
+			    &:nth-of-type(3n+1) {
+				    clear: both;
+				}
+			}
+			.mobile-screen({
+				&.two-cols li,
+				&.three-cols li{
+					width: 100%;
+					float: none;
+					clear: both;
+				}
+			});
+		}
+		.fa{
+			color: @lightGreen;
+			padding-right: 8px;
+			.font-size(25);
+		}
+	}
+}

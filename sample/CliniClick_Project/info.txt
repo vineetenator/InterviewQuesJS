@@ -1,0 +1,3 @@
+mysql -u root -pmimedia luckbase<filename.sql
+
+bitbuket_mnbvcxz@0987

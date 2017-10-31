@@ -1,0 +1,105 @@
+//
+// Dedicated to LESS global function & mixins
+// --------------------------------------------------
+
+.font-size(@fontSize: @baseFontSize) {
+	@rem: unit(@fontSize / @baseFontSize);
+  	font-size: @fontSize * 1px;
+  	font-size: ~"@{rem}rem"; 
+}	  
+  
+.responsive(@minWidth; @rules) {
+    @media only screen and (min-width: @minWidth) {
+        @rules();
+    }
+}
+
+// mixin rules for PC & tablets only
+.tab-pc-screen(@rules){
+    @media only screen and (min-width: 768px) {
+        @rules();
+    }
+}
+
+// mixin rules for mobile only
+.mobile-screen(@rules){
+    @media only screen and (max-width: 767px) {
+        @rules();
+    }
+}
+
+.landscape(@rules){
+    @media (orientation : landscape){
+        @rules();
+    }
+}
+
+.portrait(@rules){
+    @media (orientation : portrait){
+        @rules();
+    }
+}
+
+// Left Rigth Margin
+.left-right-margin(@val){
+  margin-left:  @val;
+  margin-right: @val;
+}
+
+// Left Rigth padding
+.left-right-padding(@val){
+  padding-left:  @val;
+	padding-right: @val;
+}
+
+// Border radius for all browser
+.border-radius(@radius: 0px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+// Box shadow for all browser will list all the args
+.border-up-down(...) {
+    border-bottom: @arguments;
+       border-top: @arguments;
+}
+
+.border-left-right(...) {
+    border-left:  @arguments;
+    border-right: @arguments;
+}
+
+// Box shadow for all browser will list all the args
+.box-shadow(...) {
+    -webkit-box-shadow: @arguments;
+       -moz-box-shadow: @arguments;
+            box-shadow: @arguments;
+}
+
+// Transition
+.transition(...){    
+    -webkit-transition: @arguments;
+       -moz-transition: @arguments;
+        -ms-transition: @arguments;
+            transition: @arguments;
+}
+
+// Opacity {0 <= @opacity <= 100}
+.opacity(@opacity) when (@opacity > 1){
+               opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}
+.opacity(@opacity) when (@opacity <= 1){
+              opacity: @opacity;
+            @op: @opacity * 100;
+ filter: ~"alpha(opacity=@{op})";
+}
+
+// Transform Mixin
+.transform(...){
+    -webkit-transform: @arguments;
+       -moz-transform: @arguments;
+        -ms-transform: @arguments;
+            transform: @arguments;
+}

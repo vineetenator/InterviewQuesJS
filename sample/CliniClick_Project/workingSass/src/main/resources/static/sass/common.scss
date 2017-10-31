@@ -1,0 +1,20 @@
+// global styling
+html, :root{
+    font-size: 16px;
+}
+
+@-ms-viewport{
+	width:auto!important;
+}
+
+body{
+	color: $mainText;
+	background: $bodyBg;
+}
+.dash::before,
+.pincode::before{
+	content: "\2002 \2013 \2002";
+}
+.hypen::before{
+	content: "\2002 \2010 \2002";
+}
