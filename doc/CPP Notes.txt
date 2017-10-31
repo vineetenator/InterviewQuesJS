@@ -1,0 +1,23 @@
+  *a[N]         -- a is an N-element array of pointer
+(*a)[N]         -- a is a pointer to an N-element array
+   *f()         -- f is a function returning a pointer
+ (*f)()         -- f is a pointer to a function.  
+ 
+EX: int(*ptr[10])()  => array of pointer functions
+---------------------------------Start---------------------------------------- 
+int (*ptr)[30];
+can be viewed as
+
+int (*ptr)[30];
+-> ptr                 a variable called ptr
+--> *ptr               which is a pointer
+---> (*ptr)[30]        which points to an array with length of 30
+----> int (*ptr)[30]   in which each element is of type int
+if the parens are dropped, the story becomes:
+
+int *ptr[30];
+-> ptr                 a variable called ptr
+--> ptr[30]            which is an array with length of 30
+---> *ptr[30]          in which each element is a pointer
+----> int *ptr[30]     and each individual points to an int
+---------------------------------END----------------------------------------
