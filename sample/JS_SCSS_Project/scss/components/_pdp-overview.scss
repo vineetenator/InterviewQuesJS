@@ -1,0 +1,478 @@
+.pdp-overview-container {
+
+	.pdp-overview-content {
+		padding-bottom: 40px;
+		&.top{
+			padding-bottom: 0px;
+			margin-top: 12px;
+		}
+		// Right overview Active
+		.active {
+			background-color: $black;
+			color: $white !important;
+			border-color: $black !important;
+	    }
+		
+		// Right overview hover
+	    .regular-tall-container{
+			a {
+				&:hover {
+					background-color: $black;
+					color: $white !important;
+					border-color: $black !important;
+				}
+			}
+		}
+
+		.price-container {
+			font-size: 16px;
+			line-height: 20px;
+			font-family: $SimonCircularBook;
+			@include breakpoint(mobile){
+				font-size: 14px;
+			}
+			.crossed-price {
+				text-decoration: line-through;
+			}
+			.actual-price {
+				color: $plum;
+				font-family: $SimonCircularBold;
+				font-size: 33.1px;
+				line-height: 33.1px;				
+				letter-spacing: -1px;
+				margin: 4px 0 6px;
+				@include breakpoint(mobile){
+					font-size: 25px;
+					line-height: normal;
+					img{
+						padding-bottom: 4px;
+					}
+				}
+				.tooltip-icon {
+					width: 20px;
+					height: 20px;
+					display: inline-block;
+					cursor: pointer;
+					&:before {
+						@include simonicon($icon-help);
+						font-size: 21px;
+						color: $text-link;
+						@include breakpoint(desktop){
+							position: relative;
+							top: -3px;
+						}
+					}
+				}
+			}
+		}
+
+		.regular-tall-container {
+			margin: 35px 0 40px;
+			>a {
+				border: solid 1px $gray;
+				display: inline-block;
+			    padding: 5px 20px;
+			    text-align: center;
+			    font-family: $SimonCircularBold;
+			    font-size: 13.3px;
+			    line-height: 16.6px;
+			    color: $black;
+			    margin-right: 8px;
+
+			    span {
+			    	line-height: 16.6px;
+			    	display: block;
+			    }
+			}
+		}
+
+
+		.select-color {
+			margin: 36px 0 25px;
+			text-transform: capitalize;		
+			> h6 {
+				margin-bottom: 15px;
+			}
+			.color-palette{
+				max-height: 144px;
+				overflow: auto;
+			}
+			.color-switches {
+				width: 53px;
+				height: 37px;
+				position:relative;
+				display: inline-block;
+				margin:0 12px 11px 0;
+				float: left;
+				cursor: pointer;
+
+				&:hover {
+					&:after {
+						content:"";
+						clear: both;
+						display: block;
+						border-bottom: 4px solid $black;
+						margin-top: 41px;
+					}
+				}
+				&.active {
+					&:after {
+						content:"";
+						clear: both;
+						display: block;
+						border-bottom: 4px solid $black;
+						margin-top: 41px;
+					}
+					&.not-available:after{
+						margin-top: 0;
+						background-position-y: 0;
+						box-sizing: content-box;
+						padding-bottom: 4px;
+						background-size: 100% calc(100% - 4px);
+					}
+				}
+			}
+		}
+
+		.add-to-bag {
+			margin: 40px 0 25px;
+			> .btn {
+				width: 100%;
+			}
+		}
+
+		.add-to-favorites {
+			> a {
+				color: $text-link;
+				&:hover {
+					color: $black;
+				}
+			}
+		}
+	}
+	
+
+	.pdp-overview-accordion {
+
+		@include breakpoint(mobile){
+			.panel-default{
+			    padding: 0 25px;
+			}
+		}
+		border-bottom: 1px solid $gray;
+		.panel-group {
+			margin-bottom: 0;
+			.panel {
+				border: 0;
+				border-top: 1px solid $gray;
+				border-radius: 0;
+				margin: 0;
+				box-shadow: inherit;
+				.product-details {
+					padding-bottom: 10px;
+				}
+				.content {
+					padding-bottom: 14px;
+				}
+				> h6 {
+					padding: 23px 0;
+					> a {
+						
+						display: block;
+						&.accordion-toggle {
+							font-family: $SimonCircularBold;
+							color: $black;
+							letter-spacing: -0.2px;
+						}
+						&.collapsed {
+							color: $gray;
+							font-family: "SimonCircular-book";
+						}
+						> .glyphicon {
+							float: right;
+							font-family: 'simon-icon';
+							font-weight: normal;
+							font-size: 10.5px;
+							top: 6px;
+							&.glyphicon-plus:before{
+								content: $icon-arrordion-plus;
+							}
+							&.glyphicon-minus:before {
+								content: $icon-arrordion-minus;
+							}
+						}
+					}
+
+				}
+			}
+		}
+	}
+	.price-may-vary{
+		font-size:13px;
+		line-height:16px;
+		color:$text-link;
+		padding-top:19px;
+		border-top:1px solid $gray;
+		@include breakpoint(mobile){
+			padding-right:25px;
+			padding-left:25px;
+		}
+	}
+	.footer-social {
+		padding-bottom:20px;
+		margin-top: 20px;
+		@include breakpoint(mobile){
+			padding-right:25px;
+			padding-left:25px;
+		}
+		section {
+			> h6 {
+				float: left;
+				margin-right: 28px;
+			}
+			> a {
+				margin-right: 28px;
+				@include breakpoint(mobile){
+					margin-right: 22px;
+				}
+			}
+		}
+	}
+
+
+}
+
+// Common PDP SCSS
+// Increase decrease quantity
+.select-quantity {
+	padding-top:8px;
+	> h6 {
+		margin-bottom: 15px;
+	}
+	.plus-minus {
+		display: inline-block;
+		a,.quantity {
+			float: left;
+		}
+		a {
+			border: 1px solid $grey-plusminus;
+			width: 36px;
+			height: 36px;
+			display: block;
+			text-align: center;
+			line-height: 36px;
+			color: $grey-plusminus;
+			font-size: 14px;
+
+			&:hover {
+				color: $black;
+				border-color: $black;
+			}
+			&.decrease {
+				&:before {
+					@include simonicon($icon-small-minus);
+				}
+			}
+
+			&.increase {
+				&:before {
+					@include simonicon($icon-plus);
+				}
+			}
+
+			&.disabled {
+				border-color: $grey-plusminus;
+				color: $grey-plusminus;
+				cursor: default;
+				pointer-events:none;
+			}
+			
+		}
+		.quantity {
+			padding: 0 15px;
+			border: 1px solid $gray;
+			border-width: 1px 0;
+			width: 53px;
+			height: 36px;
+			line-height: 36px;
+			font-size: 13.3px;
+			text-align: center;
+		}
+
+		&.out-of-stock{
+			a,
+			input.quantity{
+				pointer-events:none;
+				border-color: $grey-plusminus;
+				color: $grey-plusminus;
+				cursor: default;
+			}
+		}
+		
+	}
+}
+
+// Select Dropdown
+.list-dropdown {
+	margin-bottom:25px;
+	position: relative;
+	select {
+		border: solid 1px $gray;
+	    padding: 15px 20px;
+	    width: 100%;
+	    font-family: $SimonCircularBook;
+	    text-transform: uppercase;
+	    color: $text-link;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+	&:after {
+		@include simonicon($icon-arrow-dark-large);
+		font-size: 10px;
+		color: $text-link;
+		right: 21px;
+		top: 0;
+		padding: 15px 0px 0px 8px;
+		position: absolute;
+		pointer-events: none;
+	}
+	select::-ms-expand {
+		display: none;
+	}
+
+	option[disabled] {
+		color: $gray;
+	}
+}
+
+
+// Add to Favorites and it's active stage
+.add-to-favorites {
+	> a {
+		&:before{
+			@include simonicon($icon-favorites-blank);
+            font-size:20px;
+            margin-right: 10px;
+    		float: left;
+		}
+		&.added {
+			&:before{
+				@include simonicon($icon-fav-filled);
+				color:$plum;
+	            font-size:20px;
+	            margin-right: 10px;
+	    		float: left;
+			}
+		}
+	}
+}
+
+// Select size container
+.select-size-container {
+	padding-bottom:20px;
+	&.hoverdisabled {
+        .size-links {
+            .size-palette {
+                >a {
+                    &:hover:not(.not-available) {
+                        background-color: $white;
+                        color: $black!important;
+                        border-color: $gray !important;
+                    }
+                }
+            }
+        }
+    }
+	.btn {
+		width: 100%;
+	}
+	.size-links {
+		padding-top:10px;
+		h6 {
+			font-family: $SimonCircularBold;
+		    font-size: 16px;
+			margin-bottom: 13px;
+			text-transform: capitalize;
+			.size-guide-link {
+				float: right;
+				font-family: $SimonCircularBook;
+				color: $text-link;
+				text-decoration: underline;
+				cursor: pointer;
+			}
+		}
+		.size-palette{
+			max-height: 160px;
+			@include breakpoint(desktop){
+				overflow: auto;		
+			}
+		
+			> a {
+				font-size:13px;
+				color:$black;
+				padding:10px 15px;
+				border: solid 1px $gray;
+				display: inline-block;
+				text-align: center;
+				margin: 0 8px 8px 0; 
+				line-height: 16px;
+				position: relative;
+				font-family: $SimonCircularBook;
+				overflow: hidden;
+				text-transform: capitalize;
+				float: left;
+
+				&:hover:not(.not-available) {
+					background-color: $black;
+					color: $white !important;
+					border-color: $black !important;
+				}
+				&.active {
+					background-color: $black;
+					color: $white !important;
+					border-color: $black !important;
+					&.not-available{
+						color: $gray !important;
+						border-color: $gray !important;
+						background-color: transparent;
+					}
+				}
+			}
+		}
+
+	}
+
+	.modal-content{
+		.size-links {
+			@include breakpoint(mobile){
+				padding: 30px 30px 0;
+			}
+		}
+	}
+	
+}
+.not-available{
+	cursor: default;
+	pointer-events: none;
+	color: $gray !important;		  
+	
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		display: block;
+		background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="none" viewBox="0 0 100 100"><path d="M100 0 L0 100" stroke="gray" stroke-width="1"/><path d="M0 0 L100 100" stroke="gray" stroke-width="1"/></svg>');
+		background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiPjxwYXRoIGQ9Ik0xMDAgMCBMMCAxMDAiIHN0cm9rZT0iZ3JheSIgc3Ryb2tlLXdpZHRoPSIxIi8+PHBhdGggZD0iTTAgMCBMMTAwIDEwMCIgc3Ryb2tlPSJncmF5IiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=');
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-size: 100% 100%, auto;
+		
+	}
+	&:hover{
+		color: $text-link;
+	}
+}

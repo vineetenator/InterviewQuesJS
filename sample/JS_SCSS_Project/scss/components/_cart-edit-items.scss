@@ -1,0 +1,194 @@
+.edit-item-container {
+    @include breakpoint(desktop) {
+        padding-top: 30px;
+    }
+    .edit-last-call {
+        .last-call {
+            font-family: $SimonCircularBook;
+            font-size: 16px;
+            line-height: 20px;
+            color: $black;
+            border-right: 1px solid $black;
+            padding-right: 10px;
+            @include breakpoint(mobile){
+                font-size: 14.4px;
+                line-height: 18px;
+            }
+        }
+        @include breakpoint(mobile){
+            padding-top: 30px;
+        }
+    }
+    .retailer-pad-btm{
+        @include breakpoint(mobile){
+            padding-bottom: 30px;
+        }
+    }
+    .retailer {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        padding-left: 5px;
+        @include breakpoint(mobile){
+            font-size: 14.4px;
+            line-height: 18px;
+        }
+    }
+    .item-description {
+        font-family: $SimonCircularBold;
+        font-size: 23px;
+        line-height: 23px;
+        letter-spacing: -0.2px;
+        color: $black;
+        padding-top: 6px;
+        @include breakpoint(mobile){
+            font-size: 24.9px;
+            line-height: 24.9px;
+            letter-spacing: -0.8px;
+        }
+    }
+    .item-price {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        padding-top: 10px;
+        text-decoration: line-through;
+        @include breakpoint(mobile){
+            font-size: 14.4px;
+            line-height: 18px;
+        }
+    }
+    .item-revised-price {
+        font-family: $SimonCircularBold;
+        font-size: 23px;
+        line-height: 23px;
+        letter-spacing: -0.2px;
+        color: $plum;
+        @include breakpoint(mobile){
+            font-size: 24.9px;
+            line-height: 24.9px;
+            letter-spacing: -0.8px;
+        }
+        > a {
+            vertical-align: text-top;
+            > img {
+                height: 15px;
+                margin-top: 6px;
+            }
+        }
+    }
+    .item-discount {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        padding-top: 2px;
+        @include breakpoint(mobile){
+            font-size: 14.4px;
+            line-height: 18px;
+        }
+    }
+    .select-color {
+        font-family: $SimonCircularBold;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: -0.2px;
+        color: $black;
+        padding-top: 30px;
+        @include breakpoint(mobile){
+            font-size: 14.4px;
+            line-height: 14.4px;
+            letter-spacing: -0.1px;
+        }
+
+    }
+
+    .item-colors {
+        padding-top: 15px;
+        .color-swatches {
+            width: 53px;
+            height: 37px;
+            border: 0;
+            text-indent: -3000px;
+            outline: 0;
+            margin: 0 12px 22px 0;
+            float: left;
+            padding: 0;
+            &:after {
+                content: "";
+                width: 53px;
+                border: 2px solid $white;
+                display: block;
+                margin: 0px;
+                margin-top: 22px;
+            }
+            &:hover, &.active {
+                &:after {
+                    border: 2px solid $black;
+                }
+            }
+        }
+    }
+    .select-size{
+        font-family: $SimonCircularBold;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: -0.2px;
+        color: $black;
+        padding-top: 30px;
+        padding-bottom: 15px;
+        @include breakpoint(mobile){
+            font-size: 14.4px;
+            line-height: 14.4px;
+            letter-spacing: -0.1px;
+        }
+    }
+    .item-sizes{
+        > span{
+            padding-right: 8px;
+        }
+        .btn-size{
+            width: 53px;
+            height: 37px;
+            float:left;
+            margin-bottom:12px;
+            margin-right:12px;
+            background-color: $white;
+            border: solid 1px $gray;
+            outline: 0;
+            &:hover, &.active{
+                background-color: $black;
+                color: $white;
+            }
+        }
+
+    }
+    .update-item{
+        padding-top: 40px;
+        padding-bottom: 70px;
+
+    }
+
+    .edit-modal-image{
+        text-align:center;
+        min-height: 525px;
+    }
+}
+
+@include breakpoint(mobile){
+    .modal-body{
+        max-height: calc(100vh - 182px);
+        overflow-y: auto;
+    }
+    .modal {
+        overflow-y: hidden;
+    }
+    .modal-footer{
+        border-top: 1px solid $gray;
+        .btn{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,177 @@
+//---------global tile carousel
+.global-tile-carousel {
+  padding-top: 90px;
+  .nav-tabs {
+    border-bottom: 0;
+    padding-bottom: 20px;
+    > li.active {
+      > a {
+        border: none;
+        font-size: 27.6px;
+        font-family: $SimonCircularBold;
+        line-height: 27.6px;
+        letter-spacing: -0.8px;
+        color: $black;
+        &:hover, &:focus {
+          border: none;
+        }
+        &:after {
+          transition: font-size 150ms;
+          font-size: 0;
+        }
+        @include breakpoint(mobile) {
+          font-size: 24.9px;
+          line-height: 24.9px;
+          letter-spacing: -0.7px;
+        }
+      }
+    }
+    > li {
+      > a {
+        border: none;
+        font-size: 27.6px;
+        font-family: $SimonCircularBold;
+        line-height: 27.6px;
+        letter-spacing: -0.8px;
+        color: $text-link;
+        &:after {
+          content: "›";
+          content: "\203a";
+          font-size: 39.7px;
+          padding-left: 8px;
+          line-height: 15px;
+          height: 20px;
+          overflow: hidden;
+          display: inline-block;
+          @include breakpoint(mobile) {
+            font-size: 35.8px;
+            line-height: 18px;
+          }
+        }
+      }
+      @include breakpoint(mobile) {
+        > a {
+          font-size: 24.9px;
+          line-height: 24.9px;
+          letter-spacing: -0.7px;
+        }
+      }
+    }
+    li:nth-child(1) {
+      padding-right: 15px;
+      border-right: 3px solid $gray;
+      @include breakpoint(mobile) {
+        padding-bottom: 5px;
+        border-right: none;
+      }
+    }
+    li:nth-child(2) {
+      padding-left: 15px;
+      @include breakpoint(mobile) {
+        padding-left: 0;
+      }
+    }
+
+  }
+  .nav {
+    > li {
+      a {
+        padding: 0;
+      }
+    }
+  }
+  .tab-content {
+    padding-bottom: 100px;
+    @include breakpoint(mobile) {
+      padding-bottom: 22px;
+    }
+    .item-name {
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+      font-family: $SimonCircularLight;
+      padding-top: 12.2px;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+    .item-retailer {
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+      font-family: $SimonCircularLight;
+      padding-top: 10px;
+    }
+    .item-color {
+      font-size: 16px;
+      line-height: 20px;
+      padding-top: 10px;
+      letter-spacing: -0.2px;
+      > a {
+        color: $black;
+        font-family: $SimonCircularBold;
+      }
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 14.4px;
+        letter-spacing: -0.1px;
+      }
+    }
+    .item-discrition {
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+      font-family: $SimonCircularBook;
+      padding-top: 12px;
+      text-decoration: line-through;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+
+    }
+    .item-price {
+      font-size: 16px;
+      line-height: 20px;
+      color: $plum;
+      font-family: $SimonCircularBold;
+      img {
+        margin-left: 5px;
+        margin-bottom: 4px;
+        height: 10px;
+        cursor: pointer;
+      }
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 14.4px;
+        letter-spacing: -0.1px;
+      }
+    }
+    .item-revised-price {
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+      font-family: $SimonCircularBook;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+    .item-discount {
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+      font-family: $SimonCircularLight;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+
+  }
+
+  .favorite-right {
+    float: right;
+  }
+}

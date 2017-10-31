@@ -1,0 +1,21 @@
+.checkout-leaving-modal {
+	.checkout-leaving-container {
+		padding: 30px;
+		.leaving-btn {
+			margin-top: 30px;
+			.btn {
+				@include breakpoint(mobile) {
+					width: 100%;
+				}
+				&:last-child {
+					@include breakpoint(desktop) {
+						margin-left: 5px;
+					}
+					@include breakpoint(mobile) {
+						margin-top: 15px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+{
+  "name": "simonstorefront",
+  "version": "0.0.0",
+  "description": "Gulpconfig",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "author": "Sapient",
+  "license": "ISC",
+  "engines": {
+    "node": ">=4.0.0",
+    "npm": ">=2.14.4"
+  },
+  "dependencies": {
+    "gulp-conflict": "0.4.0",
+    "gulp-install": "0.6.0",
+    "gulp-open": "2.0.0",
+    "gulp-template": "4.0.0"
+  },
+  "devDependencies": {
+    "bower": "1.7.9",
+    "gulp": "3.9.1",
+    "gulp-bless": "3.1.0",
+    "gulp-clean": "0.3.2",
+    "gulp-csslint": "0.3.0",
+    "gulp-csslint-report": "1.0.1",
+    "gulp-define-module": "0.1.4",
+    "gulp-handlebars": "4.0.0",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "2.3.1",
+    "gulp-shell": "0.5.2",
+    "gulp-sitespeedio": "0.0.8",
+    "gulp-sonar": "3.0.1",
+    "gulp-sourcemaps": "1.5.2",
+    "gulp-uglify": "1.5.3",
+    "require-dir": "0.3.2",
+    "run-sequence": "1.1.5"
+  }
+}

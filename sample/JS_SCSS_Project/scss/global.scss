@@ -1,0 +1,36 @@
+/*
+ * DNT : IMPORT VARIABLES CSS FILES
+ -------------------------------------- */
+
+@import "variables/all";
+@import "utils/all";
+@import "vendor/bootstrap";
+
+
+/*
+ * GLOBAL SECTION START HERE
+ -------------------------------------- */
+
+@import "vendor/carousel";
+
+
+/*
+ * DNT : IMPORT BASE CSS FILES
+ -------------------------------------- */
+
+@import "base/all";
+
+
+/*
+* GLOBAL COMPONENTS STYLES
+ -------------------------------------- */
+
+@import 'components/global-header';
+@import 'components/global-mega-menu';
+@import 'components/global-footer';
+@import 'components/global-minibag';
+@import 'components/global-page-not-found';
+@import 'components/global-tiles-carousel';
+@import 'components/global-breadcrumb';
+@import 'components/global-error500';
+@import 'components/global-login';

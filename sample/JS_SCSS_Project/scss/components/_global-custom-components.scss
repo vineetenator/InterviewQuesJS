@@ -1,0 +1,585 @@
+// Custom component
+.style-items{
+    img{
+        max-width:100%;
+    }
+}
+.custom-component {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    a{
+        display: block;
+    }
+    .columns {
+        .img-container {
+            padding-bottom: 41px;
+            img, svg {
+                width: 100%;
+            }
+            
+            h4 {
+                padding: 20px 0 0;
+                span {
+                    height: 20px;
+                    overflow: hidden;
+                    display: inline-block;
+                    font-size: 33.1px;
+                    line-height:18px;
+                    @include breakpoint(mobile) {
+                        font-size: 29.9px;
+                        height: 19px;
+                    }
+                }
+            }
+            @include breakpoint(mobile) {
+                padding-bottom: 40px;
+            }
+        }
+    }
+}
+
+
+
+// the designer shop banner css
+.the-designer-shop {
+    margin: 34px 0 61px 0;
+    @include breakpoint(mobile) {
+        padding: 2px 0 40px 0;
+        margin: 0 -25px;
+    }
+    position: relative;
+    >picture {
+        img {
+            max-width: 100%;
+            @include breakpoint(mobile) {
+                float: right;
+            }
+        }
+    }
+
+    >a {
+        display: block;
+    }
+
+    .content-container {
+        text-align: center;
+        @include breakpoint(desktop) {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        @include breakpoint(mobile) {
+            text-align: left;
+            top: 0;
+            transform: inherit;
+            padding: 37px 0 0 25px;
+            position: absolute;
+        }
+
+        h1 {
+            @include breakpoint(mobile) {
+                width: 70%;
+                line-height: 40px;
+            }
+        }
+
+        .designer-banner-text {
+            margin: 19px 0 18px;
+            font-size:19.1px;
+            line-height:23.9px;
+            color:$black;
+            @include breakpoint(mobile) {
+                width: 55%;
+                font-size:17.3px;
+                line-height:21.6px;
+            }
+        }
+        .shopnow {
+            font-family:$SimonCircularBold;
+            line-height: 23.29px;
+            font-size: 19.1px;
+            letter-spacing: -0.2px;
+            color: $black;
+            span{
+                height: 18px;
+                overflow: hidden;
+                display: inline-block;
+                font-size: 27.6px;
+                line-height:17px;
+                @include breakpoint(mobile) {
+                    font-size: 24.9px;
+                    height: 17px;
+                }
+            }
+        }
+    }
+
+    &.active {
+        .content-container {
+            h1,
+            .designer-banner-text,
+            a,
+            .shopnow {
+                color: $white;
+                span {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &.left{
+        margin: 2px -15px 40px;
+        padding: 0;
+        .content-container{
+            text-align: left;
+            padding: 0 0 0 25px;
+            width: 200px;
+            top: 50%;
+            transform: translateY(-50%);
+            @include breakpoint(desktop){
+                width: 404px;
+                padding-left: 34px;
+                left: 0;
+                transform: translate(0, -50%);
+            }
+        }
+        h1,
+        .designer-banner-text{
+            width: auto;            
+        }
+        .designer-banner-text{           
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+// Trending Now SCSS
+.trending-now {
+    .trending-items {
+        padding-bottom: 31px;
+        &:nth-of-type(3n+1){
+		    clear:left;
+		}
+        a{
+            display: block;
+        }
+        @include breakpoint(mobile) {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        h4 {
+            margin: 13px 0 2px;
+        }
+
+        h6{
+            font-family:$SimonCircularBook;
+        }
+    }
+}
+
+
+// Common heading
+.common-heading {
+    .heading {
+        border-bottom: 1px solid $gray;
+        padding-bottom: 6px;
+        margin:0 15px 33px 15px;
+    }
+}
+
+
+// Designer Deals
+.designer-deals {
+    border-bottom: 1px solid $gray;
+    border-top: 1px solid $gray;
+    margin: 70px 0;
+    padding-top: 8px;
+    @include breakpoint(mobile) {
+        margin: 35px 0;
+    }
+
+    .designer-deals-container {
+        @include breakpoint(desktop) {
+            padding-bottom:34px;
+        }
+        picture{
+            float:left;
+        }
+        @include breakpoint(mobile) {
+            text-align: center;
+        }
+        > h2 {
+            margin-top: 26px;
+            @include breakpoint(mobile) {
+                margin-top: 13px;
+            }
+        }
+        > h6 {
+            margin: 43px 0 0 19px;
+            font-family: $SimonCircularBook;
+            @include breakpoint(mobile) {
+                margin: 0;
+            }
+        }
+        >h2, >h6 {
+            @include breakpoint(desktop) {
+                float: left;
+            }
+        }
+        > a {
+            font-family: $SimonCircularBold;
+            color: $black;
+            margin-top: 34px;
+            display: none;
+            @include breakpoint(desktop) {
+                float: right;
+            }
+            span{
+                font-size: 23px;
+                letter-spacing: -0.2px;
+                padding-left: 4px;
+                @include breakpoint(mobile) {
+                    font-size: 20.7px;
+                    height: 17px;
+                }
+            }
+        }
+        &:nth-child(1) {
+            > a {
+                @include breakpoint(mobile) {
+                    display: block;
+                    margin-top: 10px;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+        &:nth-child(2) {
+            > a {
+                @include breakpoint(desktop) {
+                    display: block;
+                }
+            }
+        }
+    }
+    .designer-deals-img{
+        @include breakpoint(desktop) {
+            padding-bottom:0;
+        }
+    }
+}
+
+// Social Shop
+.social-shop {
+    background-color: $gray-light;
+    padding: 70px 0;
+    @include breakpoint(mobile) {
+        padding: 40px 0;
+    }
+
+    .social-shop-containers {
+        a{
+            display: block;
+        }
+        @include breakpoint(mobile) {
+            .social-shop-content{
+                max-width: 302px;
+                padding: 0 15px;
+                
+                &:last-child{
+                    padding-right: 0;
+                }
+            }
+            #carousalFooter{
+                .slick-list{
+                    margin-bottom: 0;
+                }
+                .slick-list,
+                .slick-track{
+                    max-height: 274px;
+                }
+            }
+        }
+
+        >.main-heading {
+            font-family: SimonCircular-Bold;
+        }
+        >.sub-heading {
+            font-family: SimonCircular-Light;
+            margin-bottom: 7px;
+        }
+        >p {
+            font-family: SimonCircular-Book;
+            >a {
+                color: $black;
+                font-family: SimonCircular-Book;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        >.btn {
+            margin-top: 19px;
+            font-size: 13.3px;
+            font-family: SimonCircular-Bold;
+            letter-spacing: 0.7px;
+            width: 172px;
+            margin-left: 102px;
+        }
+
+        &.social-shop-content {
+            @include breakpoint(mobile) {
+                text-align: center;
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+
+
+// Owl Carousel
+#homepageCarousel{
+    &.slick-initialized {
+        max-width: 1440px;
+        margin: 0 auto 65px;
+        @include breakpoint(desktop) {
+            .slick-dots{
+                bottom: -40px;
+            }
+        }
+        
+        .slick-track{
+            background:$gray-light;
+            @include breakpoint(mobile) {
+                background-color: $white;
+            }
+        }
+
+        .slick-arrow{
+            @include breakpoint(mobile) {
+                display:none!important;
+            }
+            line-height: 0;
+            position: absolute;
+            top: 50%;
+            display: block;
+            width: 20px;
+            height: 35px;
+            margin-top: -10px;
+            padding: 0;
+            cursor: pointer;
+            color: transparent;
+            border: none;
+            outline: none;
+            background: transparent;
+            z-index:10;
+            font-size: 22px;
+            color:$black;
+            color:transparent;
+            &.slick-prev{
+                left:50px;
+                &:before{
+                  color:$gray;
+                  @include simonicon('\e904');        
+                 }
+                &:hover{
+                    &:before{
+                        color:$black;
+                    }
+                }
+            }
+            &.slick-next{
+                &:before{
+                color:$gray;
+                  @include simonicon('\e908');        
+                 }
+                right:50px;
+                &:hover{
+                    &:before{
+                        color:$black;
+                    }
+                }
+            }
+        }
+    }
+    
+    .slick-arrow{
+        background: transparent;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        &.slick-prev {
+            left: 0;
+            &:before{
+                @include simonicon('\e904');    
+            }
+        }
+
+        &.slick-next{
+            right: 0;
+            &:before{
+                @include simonicon('\e908');    
+            }
+        }
+    }
+    .item{
+            position:relative;
+     }
+}
+
+.owl-carousel {
+    .item {
+        > .carousel-content {
+            position: absolute;
+            z-index: 1;
+            @include breakpoint(desktop) {
+                @include center-align;
+            }
+            @include breakpoint(mobile) {
+                position: inherit;
+                text-align: center;
+            }
+
+            h1 {
+                margin-bottom: 30px;
+                @include breakpoint(mobile) {
+                    margin-top: 28px;
+                    font-size: 51.6px;
+                    line-height: 39.7px;
+                    letter-spacing: -3.1px;
+                }
+            }
+            h5 {
+                font-family: $SimonCircularBook;
+                > a {
+                    font-family: $SimonCircularBold;
+                    font-size: 19.1px;
+                    color: $black;
+                    margin-right: 17px;
+                    @include breakpoint(mobile) {
+                        font-size: 17.1px;
+                        &:nth-child(3) {
+                            display: block;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                
+                @include breakpoint(mobile) {
+                    margin-top: 20px;
+                }
+
+                &:nth-of-type(2){
+                    margin-top: 27px;
+                }
+
+                span {
+                    height: 18px;
+                    overflow: hidden;
+                    display: inline-block;
+                    font-size: 27.6px;
+                    line-height:18px;
+                    margin-left: 5px;
+                    @include breakpoint(mobile) {
+                        font-size: 24.9px;
+                        height: 17px;
+                    }
+                }
+            }
+            h1, h5 {
+                @include breakpoint(mobile) {
+                    width: inherit;
+                }
+            }
+        }
+
+        picture, h1, h5 {
+            z-index: 1;
+            position: relative;
+        }
+        picture {
+            .img-responsive {
+                z-index: 1;
+                position: relative;
+                margin: auto;
+            }
+        }
+
+        &.center-align {
+            .carousel-content {
+                @include breakpoint(desktop) {
+                    width: 515px;
+                    text-align: center;
+                    padding: 0;
+                }
+            }
+        }
+        @include breakpoint(desktop) {
+            &.white-text {
+                h1, h5{
+                    color:$white;
+                    a{
+                        color:$white;
+                    }
+                }
+            }
+        }
+    }
+    
+    .owl-controls {
+        margin: 27px 0;
+        .owl-pagination {
+            .owl-page {
+                margin-right: 4px;
+                margin-left: 4px;
+                > span {
+                    width: 6px;
+                    height: 6px;
+                    background-color: $gray;
+                }
+                &.active {
+                    > span {
+                        background-color: $black;       
+                    }
+                }
+            }
+        }
+    }
+
+    .loader-background {
+        height: 100%;
+        width: 100%;
+        background-color: $black;
+        opacity: 0.5;
+        .loader {
+            border: 5px solid transparent;
+            border-top: 5px solid $white;
+            border-bottom: 5px solid $white;
+            border-right: 5px solid $white;
+            border-radius: 50%;
+            margin: 30px auto;
+            position: relative;
+            width: 54px;
+            height: 54px;
+            opacity: 1;
+            z-index: 1040;
+            animation: spin 2s linear infinite;
+        }
+    }
+}

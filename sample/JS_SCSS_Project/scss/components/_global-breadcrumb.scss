@@ -1,0 +1,55 @@
+.breadcrumbs{
+	font-size: 16px;
+	line-height: 16px;
+	color:$text-link;
+	padding: 28px 0;
+	a{
+		text-align: left;
+		color:$text-link;
+		&:hover{
+			color:$black;
+		}
+	}
+
+	.back-to{
+		margin-right: 8px;		
+		display: inline-block;
+		&:before{
+			@include simonicon("\e904");
+			font-size: 12px;
+		}
+		
+	}
+
+	span{
+		display:inline-block;
+		margin: 0 20px;
+		font-size:22px;
+		color: $text-link;
+	}
+
+	.arrow-fwd{
+		&:before{
+			@include simonicon($icon-arrow-fwd);
+			font-size: 12px;
+			color: $gray;
+		}
+	}
+}
+
+h1 {
+	
+	&.page-heading{
+		font-family: $SimonCircularBold;
+		font-size: 28px;
+		line-height: 1;
+		letter-spacing: -0.8px;
+		text-align: left;
+		color: $black;
+		border-bottom: solid 1px $gray;
+		padding-bottom:10px;
+		margin-bottom:20px;
+		text-transform: uppercase;
+	}
+}
+

@@ -1,0 +1,98 @@
+/*===============================
+=         BUTTON CONFIG         =
+===============================*/
+
+$btn-font-size: 13.3px;
+$btn-border: 1px;
+$btn-border-radius: 0px;
+$btn-height: 53px;
+$btn-line-height: 53px;
+$animation-timing: 200ms;
+$animation-type: ease;
+
+
+
+/* add all the buttons and their states here
+ *************************************************************/
+
+.btn {
+    display: inline-block;
+    height: $btn-height;
+    line-height: $btn-line-height;
+    padding: 0 21px;
+    letter-spacing: 0.7px;
+    border: none;
+    transition: background-color $animation-timing $animation-type,
+    border-color $animation-timing $animation-type,
+    color $animation-timing $animation-type;
+    border-radius: $btn-border-radius;
+    font-family: $SimonCircularBold;
+    background: $black;
+    color: $white;
+    font-size: $btn-font-size;
+    text: {
+        align: center;
+        transform: uppercase;
+    }
+    &.plum {
+        background: $plum;
+    }
+    &.white {
+        background: $white;
+        color: $black;
+    }
+    &.plum {
+        &:hover,
+        &:focus,
+        &.hover {
+            color: $white;
+            background-color: $black;
+            outline: 0;
+        }
+    }
+    &.disabled {
+        background: $disabled-btn;
+        pointer-events: none;
+        cursor: default;
+    }
+    &.block {
+        display: block;
+        min-width: 100%;
+    }
+    &.secondary-btn {
+        &.black {
+            background: transparent;
+            border: solid 2px $black;
+            color: $black;
+        }
+        &.white {
+            background: transparent;
+            border: solid 2px $white;
+            color: $white;
+        }
+        &.disabled {
+            background: transparent;
+            border: solid 2px $disabled-btn;
+            color: $disabled-btn;
+            pointer-events: none;
+            cursor: default;
+        }
+
+        &:hover,
+        &:focus,
+        &.hover {
+            color: $gray;
+            border: solid 2px $gray;
+            outline: 0;
+        }
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.hover {
+        box-shadow:none;
+        color: $white;
+        background-color: $gray;
+        outline: 0;
+    }
+}

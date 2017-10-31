@@ -1,0 +1,8 @@
+/* FONTS
+ **************************************************************************************/
+@include font-face('SimonCircular-Bold', '../fonts/simon-circular-pro-bold-c', normal, normal, $file-formats: eot woff ttf svg);
+@include font-face('SimonCircular-Light', '../fonts/simon-circular-pro-light-c', normal, normal, $file-formats: eot woff ttf svg);
+@include font-face('SimonCircular-Book', '../fonts/simon-circular-pro-book-c', normal, normal, $file-formats: eot woff ttf svg);
+@include font-face('simon-icon', '../fonts/simon-icon', normal, normal, $file-formats: eot woff ttf svg);
+
+

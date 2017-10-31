@@ -1,0 +1,12 @@
+@import "variables/all";
+@import "utils/all";
+@import "vendor/bootstrap/mixins";
+@import "../bower_components/jquery-custom-scrollbar/jquery.custom-scrollbar";
+
+.pdp {
+	@import 'components/pdp-overview';
+	@import 'components/pdp-zoom-image';
+	@import 'components/pdp-just-added';
+	@import 'components/pdp-size-guide';
+	@import 'components/pdp-select-size-mobile';
+}

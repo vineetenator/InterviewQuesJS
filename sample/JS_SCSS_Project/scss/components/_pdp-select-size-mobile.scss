@@ -1,0 +1,14 @@
+#selectSizeMobile {
+	.modal-dialog, .modal-content {
+		height: 100%;
+	}
+	.just-added-items {
+		padding-bottom: 18px;
+	}
+	.modal-footer {
+		padding-top: 0;
+		.btn {
+			width: 100%;
+		}
+	}
+}

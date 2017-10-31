@@ -1,0 +1,18 @@
+@import "variables/all";
+@import "utils/all";
+@import "vendor/bootstrap/mixins";
+
+
+
+.checkout{
+	@import 'components/checkout-common';
+	@import 'components/checkout-guest';
+	@import 'components/checkout-right-order-summary';
+	@import 'components/cart-checkout-order-summary';
+	@import 'components/cart-checkout-item-order-details';
+	@import 'components/checkout-confirmation';
+	@import 'components/checkout-verify-address-modal';
+	@import 'components/checkout-leaving-modal';
+	@import 'components/checkout-shipping-return-modal';
+	@import 'components/global-custom-components';
+}

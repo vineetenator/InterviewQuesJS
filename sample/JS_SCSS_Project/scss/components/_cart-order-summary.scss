@@ -1,0 +1,306 @@
+//----cart order summary
+.order-summary-right{
+  float:right;
+  @include breakpoint(mobile){
+    float:none;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  @include breakpoint(desktop){
+    margin-top: -90px;
+  }
+}
+
+.cart-order-summary{
+  .bag-summary{
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.2px;
+    font-family: $SimonCircularBold;
+    color: $black;
+    > a{
+      img{
+        height: 12px;
+      }
+    }
+    
+    .popover-help-icon:before{
+        @include simonicon($icon-help);
+        font-size: 12px;
+    }
+
+    [aria-describedby^=tooltip]{
+      .popover-help-icon:before{
+        @include simonicon($icon-close-circle);
+      }
+    }
+  }
+  .view-bag-summary{
+    @include breakpoint(mobile) {
+      font-size: 14.4px;
+      line-height: 14.4px;
+      letter-spacing: -0.1px;
+      cursor: pointer;
+      font-family: $SimonCircularBook;
+      color: $gray;
+      padding: 26px 15px;
+      border-top: solid 1px $gray;  
+      &:not(.minus-icon){
+        border-bottom: solid 1px $gray;  
+      } 
+      &:after{
+        @include simonicon($icon-arrordion-plus);
+        font-size: 10.5px;
+        float: right;
+      }
+
+      &.minus-icon {
+        &:after{
+          @include simonicon($icon-arrordion-minus);
+        }
+        color: $black;
+        font-family: $SimonCircularBook;
+      }
+    }
+  }
+  .btn-padding{
+    @include breakpoint(mobile) {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+  .btn-border-top{
+    @include breakpoint(mobile) {
+      border-top: solid 1px $gray;
+    }
+  }
+  @include breakpoint(mobile){
+    padding-top: 19.5px;
+  }
+  button{
+    width: 100%;
+    @include breakpoint(mobile){
+      margin-top: 39.9px;
+      margin-bottom: 40px;
+    }
+  }
+  .order-summary-price-container{
+      @include breakpoint(desktop) {
+        &.collapse {
+          display: block;
+          visibility: visible;
+        }
+      }
+      @include breakpoint(mobile){
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .price-top-spacing {
+        padding-top: 20px;
+        @include breakpoint(mobile){
+          padding-top: 0;
+        }
+      }
+      .estimated-subtotal {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        @include breakpoint(mobile){
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+      .estimated-sub-price {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        float: right;
+        @include breakpoint(mobile){
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+      .ship-top-spacing {
+        padding-top: 8px;
+      }
+      .estimated-shipping {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        @include breakpoint(mobile){
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+      .estimated-shipping-price {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        float: right;
+        @include breakpoint(mobile){
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+      .choose-method {
+        > a {
+          font-size: 13.3px;
+          line-height: 16.6px;
+          font-family: $SimonCircularBook;
+          cursor: pointer;
+          @include breakpoint(mobile){
+            font-size: 12px;
+            line-height: 15px;
+          }
+        }
+      }
+      .tax-top-spacing {
+        padding-top: 10px;
+      }
+      .estimated-tax {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        @include breakpoint(mobile){
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+      .estimated-tax-price {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        float: right;
+        @include breakpoint(mobile){
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+      .tax-calculation {
+        > a {
+          font-size: 13.3px;
+          line-height: 16.6px;
+          font-family: $SimonCircularBook;
+          cursor: pointer;
+          @include breakpoint(mobile){
+            font-size: 12px;
+            line-height: 15px;
+          }
+        }
+      }
+      .last-call-spacing{
+        padding-top: 20px;
+      }
+      .last-call{
+        font-family: $SimonCircularBold;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: -0.2px;
+        color: $black;
+        @include breakpoint(mobile){
+          font-size: 14.4px;
+          line-height: 14.4px;
+          letter-spacing: -0.1px;
+        }
+      }
+      .last-call-price{
+        font-family: $SimonCircularBold;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: -0.2px;
+        float: right;
+        color: $plum;
+        @include breakpoint(mobile){
+          font-size: 14.4px;
+          line-height: 14.4px;
+          letter-spacing: -0.1px;
+        }
+      }
+      .you-save-spacing{
+        padding-top: 10px;
+        padding-bottom: 30px;
+      }
+      .you-save{
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        @include breakpoint(mobile){
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+      .you-save-price{
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        float: right;
+        @include breakpoint(mobile){
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+  }
+  .cart-help-container{
+      .help-info {
+        font-size: 13.3px;
+        line-height: 16.6px;
+        font-family: $SimonCircularBold;
+        color: $black;
+        padding-top: 30px;
+        @include breakpoint(mobile){
+          font-size: 12px;
+          line-height: 15px;
+        }
+      }
+    .information{
+      font-size: 13.3px;
+      line-height: 16.6px;
+      font-family: $SimonCircularBook;
+      color: $black;
+      padding-top: 5px;
+      @include breakpoint(mobile){
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    .question{
+      font-size: 13.3px;
+      line-height: 16.6px;
+      font-family: $SimonCircularBook;
+      color: $black;
+      padding-top: 20px;
+      @include breakpoint(mobile){
+        font-size: 12px;
+        line-height: 15px;
+      }
+      > a {
+        font-size: 13.3px;
+        line-height: 16.6px;
+        text-decoration: underline;
+        padding-left: 3px;
+        color: $black;
+      }
+    }
+    .more-details{
+      padding-top: 20px;
+      @include breakpoint(mobile){
+        font-size: 12px;
+        line-height: 15px;
+      }
+      > a {
+        font-size: 13.3px;
+        line-height: 16.6px;
+        text-decoration: underline;
+        color: $black;
+      }
+    }
+  }
+}

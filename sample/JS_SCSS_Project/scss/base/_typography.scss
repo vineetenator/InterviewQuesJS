@@ -1,0 +1,294 @@
+/* HEADINGS
+ *************************************************************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-display {
+    font-family: $SimonCircularBold;
+    margin: 0;
+    color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-display {
+    &.light {
+        font-family: $SimonCircularLight;
+    }
+}
+
+h1,
+.heading-display {
+    line-height: 44.8px;
+    font-size: 35.8px;
+    letter-spacing: -1.1px;
+    &.display-xl {
+        font-size: 74.3px;
+        line-height: 57.2px;
+        letter-spacing: -4.5px;
+    }
+    &.display-large {
+        font-size: 61.9px;
+        line-height: 47.7px;
+        letter-spacing: -3.7px;
+    }
+    &.display-medium {
+        font-size: 51.6px;
+        line-height: 39.7px;
+        letter-spacing: -3.1px;
+    }
+    &.display-small {
+        font-size: 43px;
+        line-height: 33.1px;
+        letter-spacing: -2.6px;
+    }
+}
+
+h2 {
+    line-height: 37.3px;
+    font-size: 29.9px;
+    letter-spacing: -0.9px;
+}
+
+h3 {
+    line-height: 24.9px;
+    font-size: 31.1px;
+    letter-spacing: -0.7px;
+}
+
+h4 {
+    line-height: 25.9px;
+    font-size: 20.7px;
+    letter-spacing: -0.2px;
+}
+
+h5 {
+    line-height: 21.6px;
+    font-size: 17.3px;
+    letter-spacing: -0.2px;
+}
+
+h6 {
+    line-height: 18px;
+    font-size: 14.4px;
+    letter-spacing: -0.1px;
+}
+
+
+
+
+/* BODY COPY
+*************************************************************/
+
+a {
+    &,
+    &:hover,
+    &:active {
+        outline: 0;
+        .img-hover-effect {
+            -webkit-filter: brightness(.8);
+            filter: brightness(.8);
+            margin: 0;
+            border: 0;
+        }
+    }
+   
+    .img-hover-effect {
+        -webkit-filter: none;
+        filter: none;
+        transition: filter 150ms ease;
+    }
+
+    line-height: 18px;
+    color: $text-link;
+    font-family: $SimonCircularBook;
+    font-size: 14.4px;
+    text: {
+        decoration: none; //transform: none;
+    }
+    transition: color 200ms ease;
+
+    &:hover{
+        color:$black;
+    }
+
+}
+
+.no-touch {
+    a {
+        &,
+        .cta-link {
+            &:hover,
+            &.hover,
+            &:focus {
+                color: $black;
+                text-decoration: none;
+            }
+            &:focus {
+                // override bootstrap here..
+            }
+            &.find-in-store:hover,
+            &.size-chart-toggle:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Base body copy styling
+html,
+body,
+p,
+.body-copy {
+    line-height: 18px;
+    font-family: $SimonCircularBook;
+    font-size: 14.4px;
+    color: $black;
+}
+
+p,
+.body-copy,
+.body-copy-alt {
+    >a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.underline {
+    text-decoration: underline;
+}
+
+.ital {
+    font-style: italic;
+}
+
+.strikethrough {
+    position: relative;
+    &:before {
+        content: '';
+        width: 100%;
+        position: absolute;
+        border-bottom: solid 1px;
+        right: 0;
+        top: 35%;
+        color: color(typography, strikethrough);
+    }
+}
+
+.small-text {
+    font-size: 12px;
+    color: $black;
+    line-height: 15px;
+}
+
+html,body{
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+/* DESKTOP VIEW PORT
+*************************************************************/
+
+@include breakpoint(desktop) {
+    h1 {
+        line-height: 49.6px;
+        font-size: 39.7px;
+        letter-spacing: -1.2px;
+        &.display-xl {
+            font-size: 98.8px;
+            line-height: 76.1px;
+            letter-spacing: -5.9px;
+        }
+        &.display-large {
+            font-size: 82.3px;
+            line-height: 63.4px;
+            letter-spacing: -4.9px;
+        }
+        &.display-medium {
+            font-size: 68.6px;
+            line-height: 52.8px;
+            letter-spacing: -4.1px;
+        }
+        &.display-small {
+            font-size: 57.2px;
+            line-height: 44px;
+            letter-spacing: -3.4px;
+        }
+    }
+
+    h2 {
+        line-height: 41.4px;
+        font-size: 33.1px;
+        letter-spacing: -1px;
+    }
+
+    h3 {
+        line-height: 34.5px;
+        font-size: 27.6px;
+        letter-spacing: -0.8px;
+    }
+
+    h4 {
+        line-height: 28.7px;
+        font-size: 23px;
+        letter-spacing: -0.2px;
+    }
+
+    h5 {
+        line-height: 23.29px;
+        font-size: 19.1px;
+        letter-spacing: -0.2px;
+    }
+
+    h6 {
+        line-height: 20px;
+        font-size: 16px;
+        letter-spacing: -0.2px;
+    }
+
+    html,
+    body,
+    p,
+    .body-copy {
+        line-height: 20px;
+        font-size: 16px;
+    }
+
+    .small-text {
+        font-size: 13.3px;
+        line-height: 16.6px;
+    }
+
+    a {
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+            outline: 0;
+        }
+        &.dropdown-toggle:focus, &:focus{
+        outline: 0 dotted;
+        }
+        &,
+        .cta-link {
+            line-height: 20px;
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.order-summary-right {
+	margin-top: 0 !important;
+	.view-bag {
+		color: $text-link;
+		float: right;
+		font-family: "SimonCircular-Book";
+	}
+	.tooltip-init {
+		height: 12px;
+		@include breakpoint(mobile){
+			margin-bottom: 2px;
+		}
+	}
+	.terms-conditions {
+		padding: 15px 0 0 25px;
+		color: $text-link;
+		&:before {
+			@include simonicon('\e920');
+		    position: absolute;
+		    left: 19px;
+		    font-size: 15px;
+		}
+		a {
+			font-size: 13.3px;
+        	line-height: 16.6px;
+        	text-decoration: underline;
+        	&:hover {
+        		color: $black;
+        	}
+		}
+	}
+}

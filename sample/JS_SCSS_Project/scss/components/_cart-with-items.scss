@@ -1,0 +1,843 @@
+//-----cart with items
+.cart-with-items{
+  @include breakpoint(desktop){
+    padding-right: 52px;
+  }
+}
+.privacy-content{
+  background:$white;
+  padding:25px 30px 0 30px;
+}
+
+.cart-modal-footer{
+
+    background:$white;
+    padding:25px 30px;
+    .secondary-btn{
+      margin-left:15px;
+    }
+}
+
+.item-removed{
+  border-bottom: 1px solid $plum;
+  padding: 15px 0 15px 0;
+  display: block;
+  .icon-removed{
+    float: left;
+    &:before{
+      @include simonicon($icon-error);
+      font-size: 20px;
+      color: $plum;
+      display: block;
+      float: left;
+    }
+  }
+  .remove-desc{
+    font-size: 13.3px;
+    line-height: 16.6px;
+    padding-left: 30px;
+    width: calc(100% - 20px);
+    display: block;
+    @include breakpoint(mobile){
+      font-size: 12px;
+      line-height: 15px;
+    }
+    > a{
+      font-size: 13.3px;
+      line-height: 16.6px;
+      font-family: $SimonCircularBold;
+      color: $black;
+      text-decoration: underline;
+      @include breakpoint(mobile){
+        font-size: 12px;
+        line-height: 15px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+.item-out-stock {
+  border-bottom: 1px solid $red;
+  padding: 15px 0 15px 0;
+}
+  .icon-out-stock {
+    float: left;
+    position: absolute;
+    &:before {
+      @include simonicon($icon-error);
+      font-size: 19px;
+      color: $red;
+      margin: 2px 0 0 2px;
+      display: inline-block;
+    }
+    @include breakpoint(mobile){
+      margin-top: 1px;
+    }
+  }
+  .out-stock-desc {
+    font-size: 13.3px;
+    line-height: 16.6px;
+    padding-left: 30px;
+    width: calc(100% - 20px);
+    @include breakpoint(mobile) {
+      font-size: 12px;
+      line-height: 15px;
+      display: inline-block;
+    }
+
+  }
+
+.cart-heading {
+  padding-bottom: 10px;
+  padding-left: 15px;
+  @include breakpoint(mobile){
+    padding-top: 43px;
+  }
+}
+.cart-bag {
+  font-size: 27.6px;
+  line-height: 27.6px;
+  letter-spacing: -0.8px;
+  color: $black;
+  font-family: $SimonCircularBold;
+  @include breakpoint(mobile) {
+    font-size: 24.9px;
+    line-height: 24.9px;
+    letter-spacing: -0.8px;
+  }
+}
+.cart-item {
+  font-size: 27.6px;
+  line-height: 27.6px;
+  letter-spacing: -0.8px;
+  color: $black;
+  font-family: $SimonCircularBook;
+  padding-left: 10px;
+  @include breakpoint(mobile) {
+    font-size: 24.9px;
+    line-height: 24.9px;
+    letter-spacing: -0.8px;
+    padding-top: 20px;
+  }
+}
+.cart-condition {
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+    font-family: $SimonCircularBook;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    @include breakpoint(mobile){
+      font-size: 14.4px;
+     line-height: 18px;
+      padding-bottom: 19.5px;
+    }
+  }
+
+.cart-items {
+    .cart-items-container {
+      .row-pad-btm {
+        padding-bottom: 35px;
+        .tooltip{
+          &.in{
+            opacity:1;
+          }
+        }
+      }
+      @include breakpoint(mobile) {
+        .img-width {
+          width: 84px;
+        }
+      }
+    }
+    border-top: 1px solid $gray;
+
+    padding-bottom: 20px;
+
+    .price-container-left{
+      padding: 10px 0 20px 15px;
+    }
+    .last-call {
+      font-size: 19.1px;
+      line-height: 19.1px;
+      letter-spacing: -0.2px;
+      font-family: $SimonCircularBold;
+      cursor: pointer;
+      padding: 30px 0 5px 0;
+      &:after{
+        @include simonicon($icon-arrordion-minus);
+        font-size: 10.5px;
+        float: right;
+      }
+      &.plus-icon {
+        &:after{
+          @include simonicon($icon-arrordion-plus);
+        }
+        color: $black;
+        font-family: $SimonCircularBold;
+      }
+      @include breakpoint(mobile) {
+        font-size: 17.3px;
+        line-height: 17.3px;
+        letter-spacing: -0.2px;
+      }
+    }
+    .return-information {
+      font-size: 16px;
+      line-height: 20px;
+      font-family: $SimonCircularBook;
+      color: $gray;
+      padding-bottom: 40px;
+      > a {
+        cursor:pointer;
+        &:focus {
+          text-decoration: none;
+          color: $black;
+        }
+      }
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+    .item-description {
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: -0.2px;
+      font-family: $SimonCircularBold;
+      color: $black;
+      padding-bottom: 10px;
+      > a {
+        color: $black;
+        font-family: $SimonCircularBold;
+        &:hover{
+          color:$text-link;
+        }
+      }
+      @include breakpoint(mobile) {
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: -0.1px;
+      }
+    }
+  .out-stock-description{
+    font-size: 16px;
+    line-height: 20px;
+    font-family: $SimonCircularBook;
+    color: $red;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    padding-top: 8px;
+    @include breakpoint(mobile) {
+      font-size: 14.4px;
+      line-height: 18px;
+    }
+  }
+    .item-price {
+      font-size: 16px;
+      line-height: 20px;
+      font-family: $SimonCircularBook;
+      text-decoration: line-through;
+      color: $black;
+      padding-right: 5px;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+    .item-revised-price {
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: -0.2px;
+      font-family: $SimonCircularBold;
+      color: $plum;
+      > img {
+        margin-bottom: 4px;
+        height: 10px;
+        cursor: pointer;
+      }
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 14.4px;
+        letter-spacing: -0.1px;
+      }
+    }
+    .item-discount {
+      font-size: 16px;
+      line-height: 20px;
+      font-family: $SimonCircularBook;
+      color: $black;
+      padding-bottom: 10px;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+    .item-qty {
+      font-size: 16px;
+      line-height: 20px;
+      font-family: $SimonCircularBook;
+      color: $black;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+
+    .errortext{
+      display:none;
+      color:$red;
+      font-family: $SimonCircularBook;
+      font-size: 14.4px;
+      line-height: 18px;
+    }
+    .item-color {
+      text-transform:capitalize;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: $SimonCircularBook;
+      color: $black;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+    .item-price-qty-wise {
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: -0.2px;
+      font-family: $SimonCircularBold;
+      display: inline-block;
+      padding-left:10px;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 14.4px;
+        letter-spacing: -0.1px;
+        float: right;
+        padding-top: 25px;
+      }
+    }
+    .qty-section {
+      padding-top: 20px;
+      display: inline-flex;
+      .txt-qty {
+              -moz-appearance:textfield;
+      }
+
+      .txt-qty::-webkit-outer-spin-button,
+      .txt-qty::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      @include breakpoint(mobile) {
+        padding-bottom: 20px;
+      }
+
+      .txt-qty {
+        width: 36px;
+        height: 25px;
+        border: 1px solid $gray;
+        font-size: 13.3px;
+        line-height: 16.6px;
+        text-align: center;
+        padding: 6px;
+
+      }
+    }
+
+    .edit-remove-container {
+      > a {
+        &:focus {
+          text-decoration: none;
+          color: $black;
+        }
+      }
+      @include breakpoint(desktop){
+        padding-left: 41px;
+      }
+      @include breakpoint(mobile) {
+        float: left;
+      }
+      .item-edit {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        border-right: 2px solid $gray;
+        padding-right: 10px;
+        @include breakpoint(mobile) {
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+
+      }
+      .item-remove {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        padding-left: 0px;
+        @include breakpoint(mobile) {
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+      .add-to-my-fav {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        padding-top: 30px;
+        > a {
+          .icon-fav-blank{
+            &:before{
+              @include simonicon("\e93c");
+              font-size: 20px;
+            }
+          }
+          &:focus {
+            text-decoration: none;
+            color: $black;
+          }
+        }
+        @include breakpoint(mobile) {
+          font-size: 14.4px;
+          line-height: 18px;
+          padding-top: 20px;
+        }
+        .fav-text {
+          padding-left: 5px;
+          float: right;
+          margin-top: 0;
+       }
+      }
+      .added-to-fav {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        padding-top: 30px;
+        .added-text {
+          padding-left: 5px;
+        }
+        @include breakpoint(mobile) {
+          font-size: 14.4px;
+          line-height: 18px;
+          padding-top: 20px;
+        }
+        .icon-fav-added{
+          float: left;
+          &:before{
+            @include simonicon("\e93b");
+            font-size: 20px;
+            color: $plum;
+          }
+        }
+      }
+    }
+
+    .item-additional-price {
+      font-family: $SimonCircularBook;
+      font-size: 16px;
+      line-height: 16px;
+      color: $plum;
+      padding-bottom: 10px;
+    }
+    .item-size {
+      font-family: $SimonCircularBook;
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+    }
+
+    .price-calculation-container {
+      border-top: 1px solid $gray;
+     
+      .price-top-spacing {
+        padding-top: 30px;
+      }
+      .estimated-subtotal {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        @include breakpoint(mobile) {
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+      .estimated-sub-price {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        float: right;
+        @include breakpoint(mobile) {
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+      .ship-top-spacing {
+        padding-top: 8px;
+      }
+      .estimated-shipping {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+      }
+      .estimated-shipping-price {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        float: right;
+        @include breakpoint(mobile) {
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+      .choose-method {
+        > a {
+          font-size: 12px;
+          line-height: 15px;
+          font-family: $SimonCircularBook;
+          cursor: pointer;
+          @include breakpoint(mobile) {
+            font-size: 12px;
+            line-height: 15px;
+          }
+        }
+      }
+      .tax-top-spacing {
+        padding-top: 10px;
+      }
+      .estimated-tax {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        @include breakpoint(mobile) {
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+
+      .estimated-tax-price {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        float: right;
+        @include breakpoint(mobile) {
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+      .tax-calculation {
+        > a {
+          font-size: 13.3px;
+          line-height: 16.6px;
+          font-family: $SimonCircularBook;
+          cursor: pointer;
+          @include breakpoint(mobile) {
+            font-size: 12px;
+            line-height: 15px;
+          }
+        }
+      }
+      .last-call-spacing {
+        padding-top: 20px;
+      }
+      .last-call-retailer {
+        font-family: $SimonCircularBold;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: -0.2px;
+        color: $black;
+        @include breakpoint(mobile) {
+          font-size: 14.4px;
+          line-height: 14.4px;
+          letter-spacing: -0.1px;
+        }
+      }
+      .last-call-price {
+        font-family: $SimonCircularBold;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: -0.2px;
+        float: right;
+        color: $plum;
+        @include breakpoint(mobile) {
+          font-size: 14.4px;
+          line-height: 14.4px;
+          letter-spacing: -0.1px;
+        }
+      }
+      .you-save-spacing {
+        padding-top: 10px;
+      }
+      .you-save {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        @include breakpoint(mobile) {
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+      .you-save-price {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        float: right;
+        @include breakpoint(mobile) {
+          font-size: 14.4px;
+          line-height: 18px;
+        }
+      }
+
+    }
+
+  }
+
+//-----order summary bottom
+.order-summary-bottom {
+  @include breakpoint(desktop){
+    margin-right: 52px;
+  }
+  padding-top: 30px;
+  padding-bottom: 100px;
+  border-top: 1px solid $gray;
+  button {
+    width: 100%;
+  }
+  .cart-summary {
+    .summary-padding-bottom {
+      @include breakpoint(mobile) {
+        padding-bottom: 30px;
+      }
+      > a {
+        img {
+          height: 12px;
+        }
+      }
+    }
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.2px;
+    font-family: $SimonCircularBold;
+    color: $black;
+    > a {
+      img {
+        height: 12px;
+      }
+    }
+  }
+  .order-summary-price-container {
+    &.collapse{
+      display: block;
+      visibility: visible;
+    }
+    .estimated-subtotal {
+      font-family: $SimonCircularBook;
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+    .estimated-sub-price {
+      font-family: $SimonCircularBook;
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+      float: right;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+    .ship-top-spacing {
+      padding-top: 8px;
+    }
+    .estimated-shipping {
+      font-family: $SimonCircularBook;
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+    .estimated-shipping-price {
+      font-family: $SimonCircularBook;
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+      float: right;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+    .choose-method {
+      > a {
+        font-size: 13.3px;
+        line-height: 16.6px;
+        font-family: $SimonCircularBook;
+        cursor: pointer;
+        @include breakpoint(mobile) {
+          font-size: 12px;
+          line-height: 15px;
+        }
+      }
+    }
+    .tax-top-spacing {
+      padding-top: 10px;
+    }
+    .estimated-tax {
+      font-family: $SimonCircularBook;
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+
+    .estimated-tax-price {
+      font-family: $SimonCircularBook;
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+      float: right;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+    .tax-calculation {
+      > a {
+        font-size: 13.3px;
+        line-height: 16.6px;
+        font-family: $SimonCircularBook;
+        cursor: pointer;
+        @include breakpoint(mobile) {
+          font-size: 12px;
+          line-height: 15px;
+        }
+      }
+    }
+    .last-call-spacing {
+      padding-top: 20px;
+    }
+    .last-call{
+      font-family: $SimonCircularBold;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: -0.2px;
+      color: $black;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 14.4px;
+        letter-spacing: -0.1px;
+      }
+    }
+    .last-call-price {
+      font-family: $SimonCircularBold;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: -0.2px;
+      float: right;
+      color: $plum;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 14.4px;
+        letter-spacing: -0.1px;
+      }
+    }
+    .you-save-spacing {
+      padding-top: 10px;
+      padding-bottom: 30px;
+    }
+    .you-save {
+      font-family: $SimonCircularBook;
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+    .you-save-price {
+      font-family: $SimonCircularBook;
+      font-size: 16px;
+      line-height: 20px;
+      color: $black;
+      float: right;
+      @include breakpoint(mobile) {
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+  }
+  .cart-help-container {
+    .help-info {
+      font-size: 13.3px;
+      line-height: 16.6px;
+      font-family: $SimonCircularBold;
+      color: $black;
+      padding-top: 30px;
+      @include breakpoint(mobile){
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    .information {
+      font-size: 13.3px;
+      line-height: 16.6px;
+      font-family: $SimonCircularBook;
+      color: $black;
+      padding-top: 5px;
+      @include breakpoint(mobile){
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    .question {
+      font-size: 13.3px;
+      line-height: 16.6px;
+      font-family: $SimonCircularBook;
+      color: $black;
+      padding-top: 20px;
+      @include breakpoint(mobile){
+        font-size: 12px;
+        line-height: 15px;
+      }
+      > a {
+        font-size: 13.3px;
+        line-height: 16.6px;
+        text-decoration: underline;
+        padding-left: 3px;
+        color: $black;
+      }
+    }
+    .more-details {
+      padding-top: 20px;
+      @include breakpoint(mobile){
+        font-size: 12px;
+        line-height: 15px;
+      }
+      > a {
+        font-size: 13.3px;
+        line-height: 16.6px;
+        text-decoration: underline;
+        color: $black;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.checkout-shipping-return-modal {
+	.shipping-return-container {
+		padding: 30px;
+		.subheading {
+			margin-bottom: 8px;
+		}
+		.shipping-data {
+			margin-top: 20px;
+			margin-bottom: 12px;
+			> .row {
+				margin-top: 30px;
+			}
+		}
+
+		.shipping-time {
+			margin-top: 5px;
+			margin-bottom: 0;
+			color: $text-link;
+		}
+		.plum-text {
+			color: $plum;
+		}
+		hr {
+			border-color: #757575;
+			border-width: 1px;
+			margin-top: 30px;
+    		margin-bottom: 30px;
+		}
+		.policy-info {
+			margin-top: 20px;
+			p {
+				margin: 0;
+			}
+		}
+		.shipping-return-btn {
+			margin-top: 30px;
+		}
+	}
+}

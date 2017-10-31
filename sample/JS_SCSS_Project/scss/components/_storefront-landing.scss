@@ -1,0 +1,32 @@
+.storefront-heading {
+  h1 {
+    &:before{
+      @include simonicon($icon-fav-filled);
+      color: $plum;
+      font-size: 20px;
+    }
+  }
+}
+.page-context-links{
+  @include breakpoint(mobile) {
+    padding-bottom: 25px;
+  }
+}
+
+#homepageCarousel.slick-initialized{
+  @include breakpoint(mobile) {
+    margin-left: -25px;
+    margin-right: -25px;
+
+    .the-designer-shop.left{
+      margin: 0;
+    }
+  }
+  @include breakpoint(desktop){
+    padding-top: 48px;
+  }
+
+  .slick-list{
+    margin-bottom: 70px;
+  }
+}

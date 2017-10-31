@@ -1,0 +1,519 @@
+// footer top spacing
+.footer-top-border {
+	margin-top: 70px;
+	@include breakpoint(mobile) {
+		margin-top: 0;
+	}
+}
+
+// Account Information
+.account-info {
+	color: $black;
+	font-family: $SimonCircularBold;
+	margin-bottom: 50px;
+	.mid-align {
+		.mid-align-content {
+			font-family: $SimonCircularBold;
+			@include breakpoint(desktop) {
+				margin-top: 14px;
+			}
+			@include breakpoint(mobile) {
+				margin-bottom: 0;
+				line-height: 10px;
+			}
+		}
+		&:nth-child(2) {
+			@include breakpoint(desktop) {
+				margin-left: 48px;
+	}
+		}
+	}
+	.checkout-signin{
+		float: right;
+		@include breakpoint(desktop) {
+			width: auto;
+		}
+	}
+	
+	span{
+		@include breakpoint(desktop) {
+			line-height: 52px;
+		}
+	}
+	a {
+		color: $black;
+		font-family: $SimonCircularBold;
+		@include breakpoint(desktop) {
+			line-height: 52px;
+		}
+		&:hover {
+			color: $text-link
+		}
+		@include breakpoint(desktop) {
+			float: right;
+		}
+	}
+	.btn {
+		@include breakpoint(mobile) {
+			margin-top: 27px;
+		}
+	}
+}
+
+
+// Shipping Inforamtion
+.checkout-shipping-container {
+	//margin-top: 50px;
+	.panel-default {
+		border: none;
+		box-shadow: none;
+		span.desktop-wedontlabel {
+				font-size: 13.3px;
+				color: $text-link;
+				text-transform: none;
+				font-family: $SimonCircularBook;
+				padding-top: 5px;
+
+				@include breakpoint(mobile) {
+					margin-top: 5px;
+				}
+				&.statement {
+					@include breakpoint(mobile) {
+						display: block;
+						float: none !important;
+					}
+					img {
+						height: 12px;
+						margin-left: 5px;
+					}
+				}
+			}
+		h5 {
+			padding-bottom: 22px;
+			
+			a {
+				font-size: 19.1px;
+				line-height: 19.1px;
+				font-family: $SimonCircularBold;
+				@include breakpoint(mobile) {
+					font-size: 17.1px;
+				}
+				
+				.tick {
+					&:before {
+						@include simonicon('\e90d');
+						color: $plum;
+						font-size: 9px;
+						position: absolute;
+						margin: 1px 0 0 8px;
+					}
+				}
+			}
+			span {
+					font-size: 13.3px;
+					color: $text-link;
+					text-transform: none;
+					font-family: $SimonCircularBook;
+					padding-top: 5px;
+
+					@include breakpoint(mobile) {
+						margin-top: 5px;
+					}
+					&.statement {
+						@include breakpoint(mobile) {
+							display: block;
+							float: none !important;
+						}
+						img {
+							height: 12px;
+							margin-left: 5px;
+						}
+					}
+				}
+		}
+		#panel4 {
+			.collapsed-content {
+				padding-bottom: 0;
+			}
+		}
+		.panel-collapse {
+			border-top: 1px solid $gray;
+			padding-top: 20px;
+			.collapsed-content {
+				padding-bottom: 50px;
+				.mandatory-text {
+					font-family: $SimonCircularBook;
+					color: $text-link;
+					margin-bottom: 20px;
+					.note{
+						font-family: "SimonCircular-Book";
+						font-size: 13.3px;
+					}
+				}
+				.shipping-fields {
+					margin-top: 5px;
+					.row {
+						/*margin-left: -5px;
+    					margin-right: -5px;*/
+    					> div {
+							/*padding-left: 5px;
+    						padding-right: 5px;*/
+    						.sm-input-group{
+    							padding-bottom: 30px;
+    							.form-control{
+    								box-shadow: none;
+    								border-radius: 0;
+    								@include placeholderuppercase("uppercase");
+    							}
+
+    							&.zipcodecontainer{
+    								@include breakpoint(mobile){
+								    width:50%;
+								 }
+    							}
+
+    						}
+    						.select-menu {
+								@include breakpoint(mobile){
+								    width:50%;
+								 }
+    							select {
+									-webkit-box-sizing: border-box;
+									-moz-box-sizing: border-box;
+									box-sizing: border-box;
+									-webkit-appearance: none;
+									-moz-appearance: none;
+									border : 1px solid $gray;
+    							}
+    							&:before {
+									color: $text-link;
+									@include simonicon('\e905');
+								    position: absolute;
+								    font-size: 10px;
+								    //left: 87%;
+								    margin-top: 17px;
+								    //margin-left: -22px;
+								    right: 21px;
+								}
+    						}
+    					}
+					}
+					.disclaimer-copy{
+						.sign-up-policy{
+							padding-bottom: 20px;
+							padding-top: 0;
+						}
+					}
+					.float-none{
+						@include breakpoint(mobile) {
+							float: none;
+						}
+					}
+					.secure-section{
+						.secure-info{							
+							font-family: "SimonCircular-Book";
+							color: #757575;
+							font-size: 12px;
+							line-height: 15px;
+							position: relative;
+							margin-left: 25px;
+							margin-bottom: 20px;
+							top: 5px;
+							&:before{
+								@include simonicon('\e920');
+								position: absolute;
+								left: -25px;
+								font-size: 18px;
+							}
+							img{
+								height: 12px;
+								margin-left: 3px;
+							}
+						}
+					}
+					.disclaimer-copy {
+						.antivirus-icon {
+							position: absolute;
+							right: 0;
+							@include breakpoint(mobile) { 
+								display: none;
+							}
+						}
+						.checkboxes {
+							margin: 5px 0 0;
+							font-weight: normal;
+							float: left;
+    						width: 100%;
+							.sm-input-group {
+								line-height: 27px;
+								padding-bottom:10px;
+								&.policybottom{
+									padding-bottom: 0;
+    								height: 20px;
+								}
+
+
+								@include breakpoint(mobile) {
+									padding-bottom: 5px;
+								}
+								
+
+								
+								input[type="checkbox"] {
+									margin: 0 10px 0 0;
+									padding-top: 0;
+									&:checked:before {
+							            margin-top: 0px;
+							        }
+								}
+							}
+							.security-certification{
+								margin-left: 78px;
+							}
+							.sign-up-policy {
+								padding-bottom: 15px;
+								padding-top: 4px;
+							}
+						}
+					}
+					&.payment-container {
+						.cards-container {
+							margin-bottom: 20px;
+							.statement{
+								font-family: "SimonCircular-Book";
+								color: #757575;
+								font-size: 12px;
+								line-height: 15px;
+								width: 100%;
+   								margin-bottom: 20px;
+								img{
+									height: 12px;
+									margin-left: 3px;
+								}
+							}
+							.cards {
+								img {
+									margin-right: 5px;
+								}
+							}
+							.secure-info {
+								position: relative;
+								color: $text-link;
+								margin-top: 12px;
+								&:before {
+									@include simonicon('\e920');
+									position: absolute;
+									left: -20px;
+    								font-size: 18px;
+								}
+								img {
+									height: 12px;
+									margin-left: 3px;
+								}
+							}
+						}
+						.cvv-tooltip {
+							position: absolute;
+							left: 75%;
+							top: 20px;
+							height: 12px;
+						}
+						.payment-subheading {
+							margin: 20px 0 15px;
+						}
+						.order-summary-right {
+							float: none;
+						}
+											
+						.row-height{
+							height: 90px
+							}
+						// Select Dropdown
+						.list-dropdown {
+							margin-bottom:25px;
+							position: relative;
+							select {
+								border: solid 1px $gray;
+							    padding: 15px 20px;
+							    width: 100%;
+							    font-family: $SimonCircularBook;
+							    text-transform: uppercase;
+							    color: $text-link;
+								-webkit-appearance: none;
+								-moz-appearance: none;
+								appearance: none;
+							}
+							&:after {
+								@include simonicon($icon-arrow-dark-large);
+								font-size: 10px;
+								color: $text-link;
+								right: 21px;
+								top: 0;
+								padding: 15px 0px 0px 8px;
+								position: absolute;
+								pointer-events: none;
+							}
+							select::-ms-expand {
+								display: none;
+							}
+
+							option[disabled] {
+								color: $gray;
+							}
+						}
+					}
+
+					.shipping-method {
+						margin: 0;
+					}
+
+
+					.shipping-address {
+						.shipping-method {
+							margin-top: 10px;
+						}
+						.btn {
+							margin-top: 10px;
+						}
+					}
+
+					button{
+						@include breakpoint(mobile) {
+							width: 100%;
+						}
+					}
+				}
+
+				.save-information-container {
+					.sm-input-group{
+						padding-bottom: 28px;
+					}
+					margin-top: 10px;
+					.saveskip-btn {
+						margin-top: 15px;
+						button{
+							&:first-of-type{
+								margin-right: 6px;
+							}
+						}
+					}
+					.pull-left {
+						@include breakpoint(mobile) {
+							margin-top: 20px;
+						}
+					}
+					.create-account {
+						a {
+							color: $black;
+							text-decoration: underline;
+							&:hover {
+								color: $text-link;
+							}
+						}
+					}
+				}
+
+				.cart-checkout-items-order-details {
+					padding-right: 0;
+					.cart-checkout-items {
+						padding-top: 30px;
+						padding-bottom: 0;
+						border-top: 0;
+						border-bottom: 1px solid $gray;
+						.confirm-retailer{
+							font-family: "SimonCircular-Bold";
+						}
+						.checkout-item-heading{
+							font-size: 13.31px;
+							color: #757575;
+							margin-top: -20px;
+							padding-bottom: 20px;
+						}
+						&:first-child {
+							padding-top: 0;
+						}
+
+						&:last-child {
+							border-bottom: 0;
+							padding-bottom: 30px;
+						}
+						
+						.return-information {
+							padding-bottom: 0;
+							font-size: 13.31px;
+							color: #757575;
+							margin-top: 4px;
+						}
+						.row-pad-btm {
+							padding-bottom: 20px;
+						}
+						.price-container-left {
+							padding-left: 0;
+						}
+						
+						.price-calculation-container {
+							button.btn {
+								margin-top: 30px;
+							}
+							.price-top-spacing {
+								//padding-top: 0;
+							}
+						}
+					}
+					.cart-checkout-allitems {
+						//margin-bottom: 30px;
+					}
+				}
+			}
+		}
+	}
+
+	.shipping-method {
+		margin-top: 40px;
+		margin-bottom: 20px;
+		.tag {
+			color: $text-link;
+			padding-bottom: 5px;
+		}
+		.select-menu {
+			margin-bottom: 5px;
+			select {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				color: $black;
+				box-shadow: none;
+    			border-radius: 0;
+			}
+			&:before {
+				color: $text-link;
+				@include simonicon('\e905');
+			    position: absolute;
+			    font-size: 10px;
+			    right: 5%;
+			    margin-top: 17px;
+			    margin-left: -22px;
+			}
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+
+
+
+// Shipping Information Edit
+.shipping-fields-edit {
+	h6 {
+		margin-bottom: 23px;
+		a {
+			margin-left: 5px;
+		}
+	}
+	.editable-text {
+		font-family: $SimonCircularBook;
+	}
+}

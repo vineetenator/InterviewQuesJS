@@ -1,0 +1,26 @@
+{
+  "name": "project-Simon",
+  "version": "0.0.3",
+  "authors": [
+    "Sapient"
+  ],
+  "directory": "./web/webroot/WEB-INF/_ui-src/responsive/rl-fe-source/bower_components",
+  "ignore": [
+    "node_modules"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.0",
+    "requirejs": "~2.1.6",
+    "requirejs-text": "~2.0.10",
+    "bootstrap": "~v3.3.2",
+    "handlebars": "~3.0.0",
+    "parsleyjs": "2.1.2",
+    "picturefill": "~2.3.1",
+    "jquery-ui": "1.11.4",
+    "jquery-typeahead": "~2.3.1",
+    "requirejs-plugins": "~1.0.3",
+	"jquery-zoom":"latest",
+	"jquery-custom-scrollbar": "^0.5.5"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,101 @@
+.error500 {
+	header {
+		background-color: $black;
+		@include breakpoint(desktop) {
+			height: 74px;
+		}
+
+		.sitelogo {
+			padding: 10px 10px 10px 0;
+    		text-align: center;
+    		.logo-desktop {
+    			@include breakpoint(desktop) {
+					display: inline-block;
+					margin-top: 20px;
+				}
+    		}
+			.logo-mobile {
+				width: 94px;
+				@include breakpoint(mobile) {
+					display: inline-block;
+				}
+			}
+		}
+		.links {
+			margin-top: 25px;
+			float: right;
+			> li {
+				display: inline-block;
+				margin-left: 26px;
+				>a {
+					color: $white;
+					font-size: 13.3px;
+        			line-height: 13.3px;
+			        letter-spacing: 0.7px;
+			        font-family: $SimonCircularBold;
+				}
+			}
+		}
+	}
+	.error500-container {
+		position: relative;
+		@include breakpoint(desktop) {
+			margin-bottom: -78px;
+		}
+		.error500-content {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			display: inline-block;
+			h1 {
+				padding-bottom: 17px;
+				@include breakpoint(mobile) {
+					padding-bottom: 5px;
+				}
+				margin-top: 252px;
+				@include breakpoint(mobile) {
+					margin-top: 43px;
+				}
+				span {
+					color: $plum;
+				}
+				@include breakpoint(mobile) {
+					font-size: 61.9px;
+					line-height: 47.7px;
+					letter-spacing: -3.7px;
+				}
+			}
+			h4 {
+				font-family: $SimonCircularBook;
+				margin: 17px 0;
+				@include breakpoint(mobile) {
+					font-size: 14.4px;
+					line-height: 1.25;
+				}
+			}
+		}
+		
+		.error500-footer-link {
+			position: relative;
+    		top: -108px;
+    		@include breakpoint(mobile) {
+				top: 0;
+    		}
+			.footer-social {
+				@include breakpoint(mobile) {
+					padding : 20px 25px;
+	    		}
+				> section {
+					border-bottom: 1px solid $gray;
+					padding-bottom: 19px;
+					margin-bottom: 5px;
+				}
+				.footer-terms {
+					padding: 10px 0 0;
+				}
+			}
+		}
+		
+	}
+}

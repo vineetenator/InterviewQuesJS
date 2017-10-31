@@ -1,0 +1,63 @@
+.tooltip-init,
+.popover-init {
+	+ .tooltip {
+		font-family:$SimonCircularBook;
+		font-size: 13.3px;
+		line-height: 16.6px;
+		color: $black;
+		opacity: 1;
+		.tooltip-inner {
+			border: 1px solid $gray;
+			background: $white;
+			padding: 10px;
+			color: $black;
+			text-align: left;
+			letter-spacing: .1px;
+			border-radius: 0;
+		}
+
+		.tooltip-arrow {
+			border-top-color: $white;
+			border-bottom-color: $white;
+			bottom: -1px;
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				border: 0 solid transparent;
+				border-left-width: 8px;
+				border-right-width: 8px;
+				z-index: -1;
+			}
+		}
+
+		&.top {
+			.tooltip-arrow {
+				border-top-width: 7px;
+				border-left-width: 7px;
+				border-right-width: 7px;
+				&:after{
+					top: -6px;
+					left: -8px;
+					border-top: 8px solid $gray;
+				}
+			}
+		}
+
+		&.bottom {
+			.tooltip-arrow {
+				border-bottom-width: 7px;
+				border-left-width: 7px;
+				border-right-width: 7px;
+				&:after{
+					top: -2px;
+					left: -8px;
+					border-bottom: 8px solid $gray;
+				}
+			}
+		}
+		
+	}
+}
+
+

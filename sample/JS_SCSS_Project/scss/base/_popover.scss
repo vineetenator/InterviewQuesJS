@@ -1,0 +1,77 @@
+.popover-init {
+	+ .popover {
+		font-family:$SimonCircularBook;
+		position: absolute;
+		margin-top: -10px;
+		
+		.popover-content,
+		.popover-title {
+			border: 1px solid $gray;
+			background: $white;
+			padding: 10px;
+			color: $black;
+			text-align: left;
+			letter-spacing: .1px;
+            border-radius: 0;
+            font-size: 13px;
+            font-weight: normal;
+		}
+
+		
+		.arrow,
+		.arrow:after{
+			position: absolute;
+			display: block;
+			width: 0;
+			height: 0;
+			border-color: rgba(239, 0, 0, 0);
+			border-style: solid;
+		}
+	
+		.arrow {
+			border-width: 11px;
+			&:after {
+				content: "";
+				border-width: 10px;
+			}
+			
+		}
+	
+		&.bottom{
+			.arrow {
+				top: -11px;
+				left: 50%;
+				margin-left: -11px;
+				border-top-width: 0;
+				border-bottom-color: #999;
+				border-bottom-color: rgba(0,0,0,.25);
+				&:after {
+					top: 1px;
+					margin-left: -10px;
+					content: " ";
+					border-top-width: 0;
+					border-bottom-color: #fff;
+				}
+			}
+		}
+	
+		&.top {
+			.arrow {	
+				bottom: -10px;
+				left: 50%;
+				margin-left: -11px;
+				border-top-color: #999;
+				border-top-color: rgba(0,0,0,.25);
+				border-bottom-width: 0;
+				&:after {
+					bottom: 1px;
+					margin-left: -10px;
+					content: " ";
+					border-top-color: #fff;
+					border-bottom-width: 0;
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,123 @@
+.page-context-links{
+	 	font-family: $SimonCircularBook;
+  		font-size: 16px;
+  		line-height: 1.25;
+  		text-align: left;
+  		color: $black;
+
+	@include breakpoint(mobile){
+		font-size: 14.4px;
+		line-height: 18px;
+	}
+	
+	
+	 
+.custom-links{
+	margin-top:15px;
+	display:inline-block;
+	margin-right: 50px;
+	cursor : pointer;
+	font-size: 16px;
+	line-height: 20px;
+	color: $black;
+	@include breakpoint(mobile){
+		font-size: 14.4px;
+		line-height: 18px;
+	}
+	span{
+		font-size: 19px;
+		line-height: 19px;
+		font-family: $SimonCircularBook;
+		vertical-align: top;
+	}
+}
+
+		
+		
+		
+	.clp-des-links {
+	 	a {
+        	margin-top:15px;
+			display:inline-block;
+			margin-right: 50px;
+			cursor : pointer;
+			font-size: 16px;
+			line-height: 20px;
+			color: $black;
+			@include breakpoint(mobile){
+				font-size: 14.4px;
+				line-height: 18px;
+			}
+			& + span{
+				font-size: 19px;
+				line-height: 19px;
+				font-family: $SimonCircularBook;
+				margin-left: -44px;
+    			margin-right: 50px;
+			}
+      	}
+	 }
+	 
+		
+	.ellipsis-text {
+		@include breakpoint(mobile) {
+			display: inline-block;
+			width: 240px;
+			white-space: nowrap;
+			overflow: hidden !important;
+			text-overflow: ellipsis;
+			font-size: 14.4px;
+			line-height: 18px;
+			font-family: $SimonCircularBook;
+			vertical-align: top;
+		}
+	}
+	.more-option{
+		font-size: 14.4px;
+		line-height: 18px;
+		font-family: $SimonCircularBook;
+		color: $gray;
+		vertical-align: super;
+		&:after {
+			@include simonicon($icon-arrordion-plus);
+			padding-left: 5px;
+			font-size: 8px;
+			color: $gray;
+		}
+	}
+
+	.hide-ellipsis{
+		text-overflow: clip;
+	}
+}
+
+
+ .custom-heading-links-component{
+    padding-bottom:60px;
+	 h3{
+		 &.heading-border{
+			 border-bottom: 1px solid $gray;
+			 padding-bottom: 10px;
+		 }
+	 }
+    .custom-links{
+      a{
+        display:inline-block;
+        padding-top:15px;
+		  color: $black;
+		  &:hover{
+			  color: $text-link;
+		  }
+		  span{
+			  font-size: 19px;
+			  line-height: 19px;
+			  vertical-align: top;
+		  }
+		  & + span {
+		  	margin-left: 8px;
+		  	 font-size: 19px;
+   			 line-height: 19px;
+		  }
+      }
+    }
+  }

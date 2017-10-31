@@ -1,0 +1,694 @@
+.my-account{
+	margin: 30px 0;
+}
+h1.page-heading{
+	@include breakpoint(mobile) {
+	    font-size: 24.9px;
+	    letter-spacing: -0.8px;
+	}
+}
+.myorder-details-container{
+	padding-top: 10px;
+	padding-bottom: 60px;
+	font-family: "SimonCircular-Book";
+	font-size: 16px;
+	line-height: 1.25;
+	@include breakpoint(mobile) {
+	    font-size: 14.4px;
+	}
+	.myorder-details{
+		.date-bold, .date-detail{
+			font-family: "SimonCircular-Bold";
+			line-height: 1;
+			letter-spacing: -0.2px;
+			text-transform: uppercase;
+		}
+		.date-bold{
+			@include breakpoint(mobile) {
+			    padding-bottom: 5px;
+			}
+		}
+		.date-detail{
+			@include breakpoint(mobile) {
+			    font-family: "SimonCircular-Book";
+			}
+		}
+		.order-detail-col{
+			padding-top: 40px;
+			padding-bottom: 20px;
+			border-bottom: solid 1px #b4b2b0;
+		}
+		.order-detail-row{
+			padding-top: 26px;
+			padding-bottom: 30px;
+			@include breakpoint(mobile) {
+			    margin: 0;
+			    padding: 20px 5px;
+			}
+			&:nth-of-type(even){
+				background-color: #f1f1f1;
+			}
+			.order-detail-com{
+				a{
+					text-decoration: underline;
+				}
+				@include breakpoint(mobile) {
+				    padding-bottom: 25px;
+				}				
+			}
+			.price{
+				color: #9f005b;
+				font-family: "SimonCircular-Bold";
+			}
+		}
+	}
+	.submit-btn{
+		display: inline-block;
+		padding-top: 30px;
+		@include breakpoint(mobile) {
+			.btn{
+				width: 100%;
+			}
+		}
+	}
+}
+
+.status{
+	padding-top: 5px;
+	position: relative;
+	padding-left: 15px;
+	@include breakpoint(mobile) {
+	    padding-top: 14px;
+	}
+	&:before{
+		content: "";
+		position: absolute;
+		border-radius: 50%;
+		left: -1px;
+		width: 12px;
+		height: 12px;
+		top: 8px;
+		@include breakpoint(mobile) {
+		    top: 16px;
+		}
+	}
+	&.shipped{
+		&:before{
+			border: 1px solid #9f005b;
+			background-color: #9f005b;
+		}
+	}
+	&.cancel{
+		&:before{
+			border: 1px solid #f5bd47;
+			background-color: #f5bd47;
+		}
+	}
+	&.processing{
+		&:before{
+			border: 1px solid #dd0b0b;
+			background-color: #dd0b0b;
+		}
+	}
+}
+.order-detail-container-modal{
+	.modal-dialog{
+    	.modal-content{
+			@include breakpoint(desktop) {
+				width: 764px;
+			}
+		}
+	}
+	.modal-body{
+		padding: 0 30px 30px;
+	}
+	.order-detail-container{
+		font-size: 16px;
+		font-family: "SimonCircular-Bold";
+		letter-spacing: -0.2px;
+		@include breakpoint(mobile) {
+			font-size: 14.4px;
+			letter-spacing: -0.1px;
+			line-height: 1;
+		}
+		.content-space{
+			padding-bottom: 30px;
+			padding-top: 30px;
+			border-bottom: solid 1px #b4b2b0;
+			.myorder-details{
+				display: inline-block;
+				width: 35%;
+				vertical-align: top;
+				@include breakpoint(mobile) {
+					width: 100%;
+					&:first-of-type{
+						padding-bottom: 40px;
+					}
+				}
+			}
+			.return-information{
+				font-size: 16px;
+			    line-height: 20px;
+			    font-family: "SimonCircular-Book";
+			    color: #757575;
+			    padding-bottom: 32px;
+			}
+			.customer-service{
+			    font-family: "SimonCircular-Book";
+			    color: #757575;
+			}
+			.major{
+				padding-bottom: 20px;
+			}
+			.normal-text{
+				font-family: "SimonCircular-Book";
+				p{
+					margin-bottom: 0;
+				}
+			}
+			&.last-call{
+				padding-bottom: 10px;
+				.major{
+					padding-bottom: 10px;
+				}
+				.bold-txt{
+					font-family: "SimonCircular-Bold";
+					padding-right: 23px;
+				}
+				.order-track{
+					padding-bottom: 5px;
+					.bold-txt{
+						width: 20%;
+						@include breakpoint(mobile) {
+							width: 40%;
+						}
+					}
+					div{
+						display: inline-block;
+					}
+				}
+				&.final-estimation{
+					border-bottom: 0;
+				}
+			}
+			.cart-items-container{
+				@include breakpoint(mobile) {
+					padding-top: 20px;
+				}
+				.checkout-item-heading{
+					font-size: 13.31px;
+					color: #757575;
+					margin-top: -20px;
+					padding-bottom: 20px;
+				}
+				&:first-child {
+					padding-top: 0;
+				}
+				.return-information {
+					padding-bottom: 0;
+					font-size: 13.31px;
+					color: #757575;
+					margin-top: 4px;
+				}
+				.row-pad-btm {
+					padding-bottom: 20px;
+				}
+				.price-container-left {
+					padding-left: 0;
+				}
+				
+				.price-calculation-container {
+					button.btn {
+						margin-top: 30px;
+					}
+				}
+
+				.item-description {
+					font-size: 16px;
+					line-height: 16px;
+					letter-spacing: -0.2px;
+					font-family: $SimonCircularBold;
+					color: $black;
+					padding-bottom: 10px;
+					> a {
+					  color: $black;
+					  font-family: $SimonCircularBold;
+					}
+					@include breakpoint(mobile) {
+					  font-size: 14px;
+					  line-height: 14px;
+					  letter-spacing: -0.1px;
+					}
+				}
+
+			  .item-price {
+			    font-size: 16px;
+			    line-height: 20px;
+			    font-family: $SimonCircularBook;
+			    text-decoration: line-through;
+			    color: $black;
+			    padding-right: 5px;
+			    @include breakpoint(mobile) {
+			      font-size: 14.4px;
+			      line-height: 18px;
+			    }
+			  }
+			  .item-revised-price {
+			    font-size: 16px;
+			    line-height: 16px;
+			    letter-spacing: -0.2px;
+			    font-family: $SimonCircularBold;
+			    color: $plum;
+			    > img {
+			      margin-bottom: 4px;
+			      height: 10px;
+			      cursor: pointer;
+			    }
+			    @include breakpoint(mobile) {
+			      font-size: 14.4px;
+			      line-height: 14.4px;
+			      letter-spacing: -0.1px;
+			      display: inline-block;
+			    }
+			  }
+		      .subtotal{
+		      	@include breakpoint(mobile) {
+					float: right;
+					display: inline-block !important;
+			      }
+		      }
+			  .item-discount {
+			    font-size: 16px;
+			    line-height: 20px;
+			    font-family: $SimonCircularBook;
+			    color: $black;
+			    padding-bottom: 10px;
+			    @include breakpoint(mobile) {
+			      font-size: 14.4px;
+			      line-height: 18px;
+			    }
+			  }
+			  .item-qty {
+			    font-size: 16px;
+			    line-height: 20px;
+			    font-family: $SimonCircularBook;
+			    color: $black;
+			    @include breakpoint(mobile) {
+			      font-size: 14.4px;
+			      line-height: 18px;
+			    }
+			  }
+			  .item-color {
+			    font-size: 16px;
+			    line-height: 20px;
+			    text-transform:capitalize;
+			    font-family: $SimonCircularBook;
+			    color: $black;
+			    @include breakpoint(mobile) {
+			      font-size: 14.4px;
+			      line-height: 18px;
+			    }
+			  }
+			  .item-additional-price {
+			    font-family: $SimonCircularBook;
+			    font-size: 16px;
+			    line-height: 16px;
+			    color: $plum;
+			    padding-top: 5px;
+			  }
+			  .price-container-left{
+			  	padding: 10px 0 20px;
+			  }
+			  .price-calculation-container {
+			    border-top: 1px solid $gray;
+			   
+			    .price-top-spacing {
+			      padding-top: 30px;
+			    }
+			    .estimated-subtotal {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 18px;
+			      }
+			    }
+			    .estimated-sub-price {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			      float: right;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 18px;
+			      }
+			    }
+			    .ship-top-spacing {
+			      padding-top: 8px;
+			    }
+			    .estimated-shipping {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			    }
+			    .estimated-shipping-price {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			      float: right;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 18px;
+			      }
+			    }
+			    .choose-method {
+			      > a {
+			        font-size: 12px;
+			        line-height: 15px;
+			        font-family: $SimonCircularBook;
+			        cursor: pointer;
+			        @include breakpoint(mobile) {
+			          font-size: 12px;
+			          line-height: 15px;
+			        }
+			      }
+			    }
+			    .tax-top-spacing {
+			      padding-top: 10px;
+			    }
+			    .estimated-tax {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 18px;
+			      }
+			    }
+
+			    .estimated-tax-price {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			      float: right;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 18px;
+			      }
+			    }
+			    .tax-calculation {
+			      > a {
+			        font-size: 13.3px;
+			        line-height: 16.6px;
+			        font-family: $SimonCircularBook;
+			        cursor: pointer;
+			        @include breakpoint(mobile) {
+			          font-size: 12px;
+			          line-height: 15px;
+			        }
+			      }
+			    }
+			    .last-call-spacing {
+			      padding-top: 20px;
+			    }
+			    .last-call-retailer {
+			      font-family: $SimonCircularBold;
+			      font-size: 16px;
+			      line-height: 16px;
+			      letter-spacing: -0.2px;
+			      color: $black;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 14.4px;
+			        letter-spacing: -0.1px;
+			        width: 65%;
+    				display: inline-block;
+			      }
+			    }
+			    .last-call-price {
+			      font-family: $SimonCircularBold;
+			      font-size: 16px;
+			      line-height: 16px;
+			      letter-spacing: -0.2px;
+			      float: right;
+			      color: $plum;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 14.4px;
+			        letter-spacing: -0.1px;
+			      }
+			    }
+			    .you-save-spacing {
+			      padding-top: 10px;
+			    }
+			    .you-save {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 18px;
+			      }
+			    }
+			    .you-save-price {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			      float: right;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 18px;
+			      }
+			    }
+			  }
+			}
+			.cart-checkout-allitems{
+				&:last-child {
+				    border-bottom: 0;
+				    padding-bottom: 30px;
+				    padding-top: 0;
+				}
+			  .price-calculation-container {
+			    border-top: 1px solid $gray;
+			   
+			    .price-top-spacing {
+			      padding-top: 30px;
+			    }
+			    .estimated-subtotal {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 18px;
+			      }
+			    }
+			    .estimated-sub-price {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			      float: right;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 18px;
+			      }
+			    }
+			    .ship-top-spacing {
+			      padding-top: 8px;
+			    }
+			    .estimated-shipping {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			    }
+			    .estimated-shipping-price {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			      float: right;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 18px;
+			      }
+			    }
+			    .choose-method {
+			      > a {
+			        font-size: 12px;
+			        line-height: 15px;
+			        font-family: $SimonCircularBook;
+			        cursor: pointer;
+			        @include breakpoint(mobile) {
+			          font-size: 12px;
+			          line-height: 15px;
+			        }
+			      }
+			    }
+			    .tax-top-spacing {
+			      padding-top: 10px;
+			    }
+			    .estimated-tax {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 18px;
+			      }
+			    }
+
+			    .estimated-tax-price {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			      float: right;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 18px;
+			      }
+			    }
+			    .tax-calculation {
+			      > a {
+			        font-size: 13.3px;
+			        line-height: 16.6px;
+			        font-family: $SimonCircularBook;
+			        cursor: pointer;
+			        @include breakpoint(mobile) {
+			          font-size: 12px;
+			          line-height: 15px;
+			        }
+			      }
+			    }
+			    .last-call-spacing {
+			      padding-top: 20px;
+			    }
+			    .last-call-retailer {
+			      font-family: $SimonCircularBold;
+			      font-size: 16px;
+			      line-height: 16px;
+			      letter-spacing: -0.2px;
+			      color: $black;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 14.4px;
+			        letter-spacing: -0.1px;
+			      }
+			    }
+			    .last-call-price {
+			      font-family: $SimonCircularBold;
+			      font-size: 16px;
+			      line-height: 16px;
+			      letter-spacing: -0.2px;
+			      float: right;
+			      color: $plum;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 14.4px;
+			        letter-spacing: -0.1px;
+			      }
+			    }
+			    .you-save-spacing {
+			      padding-top: 10px;
+			    }
+			    .you-save {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 18px;
+			      }
+			    }
+			    .you-save-price {
+			      font-family: $SimonCircularBook;
+			      font-size: 16px;
+			      line-height: 20px;
+			      color: $black;
+			      float: right;
+			      @include breakpoint(mobile) {
+			        font-size: 14.4px;
+			        line-height: 18px;
+			      }
+			    }
+
+			  }
+			}
+		  .cart-help-container {
+		    .help-info {
+		      font-size: 13.3px;
+		      line-height: 16.6px;
+		      font-family: $SimonCircularBold;
+		      color: $black;
+		      padding-top: 30px;
+		      @include breakpoint(mobile) {
+		        font-size: 12px;
+		        line-height: 15px;
+		      }
+		    }
+		    .information {
+		      font-size: 13.3px;
+		      line-height: 16.6px;
+		      font-family: $SimonCircularBook;
+		      color: $black;
+		      padding-top: 5px;
+		      @include breakpoint(mobile) {
+		        font-size: 12px;
+		        line-height: 15px;
+		      }
+		    }
+		    .question {
+		      font-size: 13.3px;
+		      line-height: 16.6px;
+		      font-family: $SimonCircularBook;
+		      color: $black;
+		      padding-top: 20px;
+		      @include breakpoint(mobile) {
+		        font-size: 12px;
+		        line-height: 15px;
+		      }
+		      > a {
+		        font-size: 13.3px;
+		        line-height: 16.6px;
+		        text-decoration: underline;
+		        padding-left: 3px;
+		        color: $black;
+		      }
+		    }
+		    .more-details {
+		      padding-top: 20px;
+		      @include breakpoint(mobile) {
+		        font-size: 12px;
+		        line-height: 15px;
+		      }
+		      > a {
+		        font-size: 13.3px;
+		        line-height: 16.6px;
+		        text-decoration: underline;
+		        color: $black;
+		      }
+		    }
+		  }
+		  .close-popup{
+		  	padding: 30px 15px 0;
+		  	.btn{
+		  		width: 100%;
+		  	}
+		  }
+		}
+	}
+}

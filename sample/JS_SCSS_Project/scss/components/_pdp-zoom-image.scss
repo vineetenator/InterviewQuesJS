@@ -1,0 +1,208 @@
+.pdp-retailer{
+	font-size:$SimonCircularBook;
+	font-size: 16px;
+	line-height:20px;
+	padding-bottom:5px;
+	color:$black;
+	a {
+		color:$black;
+		padding-right:5px;
+		&:last-child{
+			padding-left:5px;
+		}
+		&:hover{
+			color:$text-link;
+		}
+	}
+}
+
+.pdp-promo-text{
+	padding-top:10px;
+	color:$plum;
+	font-size: 16px;
+}
+
+h1{
+	font-size:33.1px;
+	line-height:33.1px;
+	letter-spacing: -1px;
+}
+
+.product-images-container{
+	$carouselHeight: 884px;
+	$carouselHeightMobile: 495px;
+	@include breakpoint(mobile){
+		margin-bottom: 28px;
+	}
+	@include breakpoint(desktop){
+		padding-top: 30px;
+		>*{
+			float: left;
+		}
+	}
+	
+	.product-image{
+		background:url('../images/loader.gif') no-repeat 50% 50%;
+		width: calc(100% - 180px);
+		position:relative;
+		
+		
+		.zoom{
+			height:$carouselHeight;
+			cursor: zoom-in;
+			cursor: -webkit-zoom-in;
+			img.photo-1x{
+				@include vertical-align();
+			}
+			&.active{
+				cursor: zoom-out;
+				cursor: -webkit-zoom-out;				
+			}
+		}
+		img{
+			width: 100%;
+			-webkit-user-drag: none;
+			-khtml-user-drag: none;
+			-moz-user-drag: none;
+			-o-user-drag: none;
+			user-drag: none;
+		}
+
+		@include breakpoint(mobile){
+			display: none !important;
+		}
+
+		.no-image{
+			cursor: default;
+			~a.zoom-cross,
+			~a.zoom-plus-icon{
+				display: none;
+			}
+		}
+	}
+
+	.product-image,// for section on PC
+	.carousel-stage{// for mobile
+		
+		.zoom-plus-icon{
+			position: absolute;
+			bottom: 2px;
+			right: 2px;
+			color: $text-link;
+			font-size: 34px;
+			width: 32px;
+			height: 32px;
+			&:before{
+				@include simonicon('\e939');
+				position: relative;
+				bottom: -5px;	
+			}
+			&.minus:before{
+				@include simonicon('\e93a');
+			}	
+		}
+		.zoom-cross{
+			position: absolute;
+			top: 2px;
+			right: 2px;
+			display: none;
+			color: $text-link;
+			font-size: 16px;
+			
+			&:before{
+				@include simonicon('\e90f');				
+			}
+		}
+		.zoom-plus-icon,
+		.zoom-cross{
+			&:hover{
+				color: $black;
+			}
+		}
+	}
+
+	// Slick Carousel CSS
+	$carouselRightPadding: 30px;
+	.gallery-carousel{
+		@include breakpoint(desktop){
+			height: $carouselHeight;
+			width: 114px;
+		}
+	}
+	.carousel-stage{
+		@include breakpoint(desktop){
+			height: 845px;
+			overflow: hidden;
+			padding-right: $carouselRightPadding;
+			margin-bottom:5px;
+
+			.item{
+				height: 128px;
+				width: 84px;
+				box-sizing: border-box;
+				border: 1px solid $gray-light;
+				cursor: pointer;
+				&:focus{
+					outline: 0;
+				}
+				&:not(:last-child){
+					margin-bottom: 15px;
+				}
+
+				&.selected{
+					border: 1px solid $gray;
+				}
+			}
+		}
+	}
+
+	.slick-arrow{
+		text-align: center;
+		font-size: 14px;
+		padding-right: $carouselRightPadding;
+		cursor: pointer;
+		color: $text-link;
+		&.slick-bottom-next{
+			.icon{
+				display: inline-block;
+				&:before{
+					@include simonicon("\e907");	
+				}
+			}
+		}
+		&.slick-top-prev{
+			height:20px;
+			.icon{
+				display: inline-block;
+				&:before{
+					@include simonicon("\e90b");
+					position: relative;
+					top: -6px;								
+				}
+			}
+		}
+
+		&.slick-disabled{
+			color: $gray;
+			cursor: default;
+		}
+	}
+
+	// Slick Carousel
+	@include breakpoint(mobile){
+		.carousel-stage{
+			margin-top: 30px;
+		}
+		.item{		
+			img.thumbnail{
+				margin: auto;
+			}
+			img.img-responsive{
+				max-width: initial;
+				width: 100%;
+			}
+		}
+	}
+
+}
+

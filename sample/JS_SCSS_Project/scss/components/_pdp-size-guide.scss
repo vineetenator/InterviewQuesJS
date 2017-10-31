@@ -1,0 +1,34 @@
+#sizeGuideModal {
+	z-index: 9999;
+	.modal-dialog {
+		width: 724px;
+		@include breakpoint(mobile) {
+			width: inherit;
+		}
+	}
+}
+
+.size-guide {
+	padding: 30px 10px 0 30px;
+	
+	.scroll-container {
+		overflow: auto;
+		margin-top: 30px;
+    	@include breakpoint(mobile) {
+			height: 373px;
+		}
+	}
+
+	.subheading{
+		padding-left: 10px;
+	}
+
+	.list-dropdown{
+		margin-right: 20px;
+	}
+}
+#sizeGuideModalContent{
+	.modal-footer {
+		padding: 0 0 30px 30px;
+	}
+}

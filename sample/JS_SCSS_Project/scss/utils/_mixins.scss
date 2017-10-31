@@ -1,0 +1,338 @@
+// A mixin to include retina images for HDPI devices
+// Bourbon Retina helper would be better for this
+// @retina-image($filename, $background-size, $extension*, $retina-filename*, $retina-suffix*, $asset-pipeline*)
+// Docs: http://bourbon.io/docs/#retina-image
+@mixin image-2x($image, $width, $height) {
+    @media (min--moz-device-pixel-ratio: 1.3),
+    (-o-min-device-pixel-ratio: 2.6/2),
+    (-webkit-min-device-pixel-ratio: 1.3),
+    (min-device-pixel-ratio: 1.3),
+    (min-resolution: 1.3dppx) {
+        background-image: url($image);
+        background-size: $width $height;
+    }
+}
+
+
+//mixin for icons
+@mixin icon($name:'') {
+    background-image: url('../icons/'+$name+'.svg');
+    background-repeat: no-repeat;
+    content: '';
+}
+ 
+@mixin simonicon($name:'') {
+    font-family:'simon-icon';
+    font-weight:normal;
+    content: $name;
+}
+
+@mixin placeholderuppercase($uppercase){
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        text-transform: $uppercase;
+        color : $text-link;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        text-transform: $uppercase;
+        color : $text-link;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        text-transform: $uppercase;
+        color : $text-link;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        text-transform: $uppercase;
+        color : $text-link;
+    }
+}
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin translate ($x,
+$y) {
+    @include transform(translate($x, $y));
+}
+
+
+
+// =============================================================================
+// Font Face
+// =============================================================================
+@mixin font-face($name,
+$path,
+$weight: null,
+$style: null,
+$file-formats: eot woff2 woff ttf svg) {
+    $src: null;
+
+    $extmods: ( eot: "?",
+    svg: "#" + str-replace($name, " ", "_"));
+
+    $formats: ( otf: "opentype",
+    ttf: "truetype");
+
+    @each $ext in $file-formats {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+// A Responsive breakpoint utility
+@mixin breakpoint($point,
+$value: 0) {
+    @if $point==mobile {
+        @media (min-width: $bp-mobile-min) and (max-width: $bp-mobile-max) {
+            @content;
+        }
+    }
+    @else if $point==desktop {
+        @media (min-width: $bp-desktop-min) {
+            @content;
+        }
+    } @else if $point==desktop-medium {
+        @media (min-width: $bp-desktop-min) and (max-width: $bp-desktop-medium) {
+            @content;
+        }
+    }
+    @else {
+        @media ($point: $value) {
+            @content;
+        }
+    }
+}
+
+// A Responsive breakpoint utility for between breakpint edge cases
+@mixin between-breakpoints($min,
+$max) {
+    @media (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+
+
+@mixin table($tabletype: table,
+$align: middle) {
+    display: $tabletype;
+    height: 100%;
+    >* {
+        display: table-cell;
+        vertical-align: $align;
+    }
+}
+
+// Vertical Alginment for IE9+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/// Horizontal Alginment for IE9+
+@mixin horizontal-align {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+/// Center Alginment for IE9+
+@mixin center-align {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+@mixin font-size($size,
+$lineheight: false) {
+    //Base font size defined in vars
+    $remSize: ($size / ($size * 0 + 1)) / $baseFontSize;
+    font-size: $size;
+    font-size: #{$remSize}rem;
+
+    @if($lineheight !=false) {
+        $remLineHeight: ($lineheight / ($lineheight* 0 + 1)) / $baseFontSize;
+        line-height: $lineheight;
+        line-height:#{$remLineHeight}rem;
+    }
+}
+
+
+
+/**
+ * Burger
+ *
+ * (---) top    -> &:before
+ * [---] middle -> &
+ * (---) bottom -> &:after
+ */
+
+
+/**
+ * Burger
+ */
+
+$burger-height: 0 !default;
+$burger-gutter: 0 !default;
+
+@mixin burger($width: 30px,
+$height: 5px,
+$gutter: 3px,
+$color: color(general,
+hoverText),
+$border-radius: 0,
+$transition-duration: .3s) {
+    $burger-height: $height;
+    $burger-gutter: $gutter;
+
+    position: relative;
+    margin-top: $height + $gutter;
+    margin-bottom: $height + $gutter;
+
+    &,
+    &:before,
+    &:after {
+        display: block;
+        width: $width;
+        height: $height;
+        background-color: $color;
+        @if $border-radius !=0 {
+            border-radius: $border-radius;
+        }
+
+        -webkit-transition-property: background-color,
+        -webkit-transform;
+        -moz-transition-property: background-color,
+        -moz-transform;
+        -o-transition-property: background-color,
+        -o-transform;
+        transition-property: background-color,
+        transform;
+
+        -webkit-transition-duration: $transition-duration;
+        -moz-transition-duration: $transition-duration;
+        -o-transition-duration: $transition-duration;
+        transition-duration: $transition-duration;
+    }
+
+    &:before,
+    &:after {
+        position: absolute;
+        content: "";
+    }
+
+    &:before {
+        top: -($height + $gutter);
+    }
+
+    &:after {
+        top: $height + $gutter;
+    }
+}
+
+
+
+/**
+ * Select parts of the burger
+ */
+
+@mixin burger-parts {
+    &,
+    &:before,
+    &:after {
+        @content;
+    }
+}
+
+@mixin burger-top {
+    &:before {
+        @content;
+    }
+}
+
+@mixin burger-middle {
+    & {
+        @content;
+    }
+}
+
+@mixin burger-bottom {
+    &:after {
+        @content;
+    }
+}
+
+
+
+/**
+ * Burger animations
+ */
+
+@mixin burger-to-cross {
+    & {
+        background-color: transparent;
+    }
+    &:before {
+        -webkit-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+        -moz-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+        -ms-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+        -o-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+        transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+        top: 0px;
+    }
+    &:after {
+        -webkit-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        -moz-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        -ms-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        -o-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        top: 0px;
+    }
+}
+
+@mixin font ($name,
+$style: 'normal') {
+    $font: ( family: unquote("'HCo Gotham'"),
+    weight: 500,
+    style: unquote($style));
+
+    @if ($name=='Gotham HTF Book' or $name=='Gotham Book' or $name=='Gotham Book Regular') {
+        $font: map-merge($font, (weight: 400));
+    }
+    @else if($name=='Gotham Light Regular') {
+        $font: map-merge($font, (weight: 300));
+    }
+    @else if($name=='Didot HTF 16 Medium') {
+        $font: map-merge($font, (family: unquote("'HCo Didot 96'")));
+        $font: map-merge($font, (weight: 300));
+    }
+    @else {
+        // Default fonts
+    }
+    font-family: map-get($font,
+    family);
+    font-weight: map-get($font,
+    weight);
+    font-style: map-get($font,
+    style);
+}

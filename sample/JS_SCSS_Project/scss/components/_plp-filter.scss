@@ -1,0 +1,263 @@
+.plp-filters{
+    .custom-dropdown {
+       ul {
+            li {
+                border-top: solid 1px $gray;
+                font-family: "SimonCircular-Bold";
+                color: #757575;
+                > a {
+                   padding: 23px;
+                    color: $text-link;
+                    &:hover {
+                        background: none;
+                    }
+                }
+            }
+       }
+    }
+    .filters{
+        padding: 10px 0;
+        @include breakpoint(mobile){
+            .col-xs-6:first-of-type{
+                padding-right: 5px;
+            }
+
+            .col-xs-6 + .col-xs-6{
+                padding-left: 5px;
+            }
+
+            .product-count{
+                padding-top: 10px;
+            }
+        }
+
+        @include breakpoint(desktop){
+            .product-count{
+                padding-bottom: 10px;
+            }
+        }
+    }
+    .clear-all{
+        line-height: 3.25;
+        a{
+            &:after {
+                @include simonicon($icon-close-small);
+                font-size: 12px;
+                padding-left: 10px
+            }
+        }
+    }
+    .browse-categories{
+        @include breakpoint(mobile){
+            margin-bottom: 5px;
+        }
+    }
+
+
+    // Filter
+    .dropdown-accordion {
+        ul.dropdown-menu {
+            .panel-group {
+                margin: 0;
+                .panel {
+                    box-shadow: inherit;
+                    border-top: solid 1px $gray;
+                    border-radius: 0;
+                    margin: 0;
+                    .panel-heading {
+                        padding: 0;
+                        .plp-clear {
+                            position: absolute;
+                            margin: 23px 0 0 100px;
+                            font-size: 16px;
+                            color: $text-link;
+                        }
+                        .panel-title {
+                            padding: 23px;
+                            display: block;                            
+                            color: $text-link;
+                            outline: 0;
+                            &:not(.collapsed){
+                                font-family: $SimonCircularBold;
+                            }
+                            &:after {
+                                color: $text-link;
+                                @include simonicon($icon-arrordion-plus);
+                                font-size: 10px;
+                                float: right;
+                                line-height: 22px;
+                                padding-right: 2px;
+                                color: $text-link;
+                            }
+                            &[aria-expanded="true"] {
+                                color: $black;
+                                &:after {
+                                    content: $icon-arrordion-minus;
+                                    color: $black;
+                                }
+                            }
+                            
+                        }
+                    }
+                    .panel-collapse {
+                        .panel-body {
+                            border: 0;
+                            padding: 0 23px 23px;
+
+                            .size-palette{                           
+                                > a {
+                                    border: solid 1px $gray;
+                                    display: inline-block;
+                                    text-align: center;
+                                    margin: 0 15px 18px 0; 
+                                    line-height: 36px;
+                                    position: relative;
+                                    overflow: hidden;
+                                    text-transform: capitalize;
+                                    float: left;
+                                    font-size: 13.3px;
+                                    width: 53px;
+                                    height: 37px;
+                                    text-align: center;
+                                    color: $black;
+
+                                    &:hover:not(.crossed) {
+                                        background-color: $black;
+                                        color: $white !important;
+                                        border-color: $black !important;
+                                    }
+                                    &.active {
+                                        background-color: $black;
+                                        color: $white !important;
+                                        border-color: $black !important;
+                                    }
+                                    &.fix-size{
+                                        margin-right: 20px;
+                                        &:nth-child(4n){
+                                            margin-right: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            .apply-btn {
+                                width: 100%;
+                                margin-top: 10px;
+                            }
+
+                            .size-type {
+                                > a {
+                                    width: inherit;
+                                    height: inherit;
+                                    padding: 0 15px;
+                                }
+                            }
+
+                            .select-color {        
+                                .color-palette-item {
+                                    width: 53px;
+                                    display: inline-block;
+                                    margin:0 16px 11px 0;
+                                    cursor: pointer;
+                                    border-bottom: 4px solid transparent;
+                                    font-size: 12px;
+                                    &:hover, &.active {
+                                       border-bottom: 4px solid $black;
+                                    }
+                                    .color-switches {
+                                       height: 37px;
+                                       display: block;                         
+                                    }
+                                    &:nth-child(4n){
+                                        margin-right: 0
+                                    }
+                                }
+                            }
+
+                            .designers-container {
+                                .plp-login {
+                                    margin-top: 15px;
+                                    color: $black;
+                                    a {
+                                        color: $black;
+                                        text-decoration: underline;
+                                    }
+                                }
+                                .checkboxes-container {
+                                    margin-top: 15px;
+                                    .checkboxes {
+                                        clear: both;
+                                        font-size: 16px;
+                                        input {
+                                            &[type="checkbox"] {
+                                                margin-right: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .line-item{
+                                display: block;
+                                line-height: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding: 30px 0;
+    }
+           
+}
+
+// TODO: transfer to global-select-box.scss
+.select-box{
+    position: relative;
+    &.open{
+        .caret-icon:before{
+            transform: rotateX(180deg);
+            transition: transform 150ms;
+        }
+        .dropdown-toggle{
+            //border: 2px solid $black;
+            border-bottom: 0;
+            border-color: $gray;
+        }
+    }
+
+    // List dropdown
+    .dropdown-toggle{
+        border: solid 1px $gray;
+        padding: 15px 20px;
+        width: 100%;
+        text-transform: capitalize;
+        color: $text-link;
+        background-color: white;
+        display: inline-block;
+        text-align: start;
+        text-transform: uppercase;
+        font-size: 13px;
+    }
+
+    .dropdown-menu{
+        border-radius: 0;
+        box-shadow: none;
+        width: calc(100% - 30px);
+        margin: 0 15px;
+        //border: 2px solid $black;
+        border-color: $gray;
+        border-top: 0;
+        padding: 5px 0 0;
+    }
+    .caret-icon:before {
+        color: $text-link;
+        @include simonicon($icon-arrow-dark-large);
+        font-size: 10px;
+        float: right;
+        line-height: 20px;
+    }
+}

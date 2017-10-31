@@ -1,0 +1,336 @@
+.confirm {
+  .confirm-retailer{
+    font-size: 19.1px;
+    line-height: 19.1px;
+    letter-spacing: -0.2px;
+    font-family: $SimonCircularBold;
+    cursor: pointer;
+    padding: 30px 0 5px 0;
+    @include breakpoint(mobile) {
+      font-size: 17.3px;
+      line-height: 17.3px;
+      letter-spacing: -0.2px;
+    }
+  }
+  .the-designer-shop{
+  .content-container{
+      text-align:left;
+      padding-left:40px;
+      top: 50%;
+    .designer-banner-text {
+      color: $gray !important;
+      font-size: 68.6px;
+      line-height: 52.8px;
+      letter-spacing: -4.1px;
+      text-transform: uppercase;
+      font-family: $SimonCircularBold;
+      margin: 0;
+    }
+    .shopnow {
+      padding-top: 20px;
+      display: inline-block;
+      > span {
+        padding-left: 5px;
+      }
+    }
+   }
+  }
+  .cart-order-summary {
+    padding-top:0;
+    .btn {
+      @include breakpoint(mobile) {
+        display: none;
+      }
+    }
+  }
+  .confirmation-heading {
+    padding-bottom: 30px;
+    @include breakpoint(desktop) {
+      margin-right: 49px;
+    }
+    .thank-you {
+      color: $plum;
+      font-size: 27.6px;
+      line-height: 27.6px;
+      letter-spacing: -0.8px;
+      font-family: $SimonCircularBold;
+      @include breakpoint(mobile){
+        font-size: 24.9px;
+        line-height: 24.9px;
+        padding-top: 40px;
+      }
+    }
+    .order-number {
+      font-size: 19.1px;
+      line-height: 19.1px;
+      letter-spacing: -0.2px;
+      padding-top: 30px;
+      font-family: $SimonCircularBold;
+      @include breakpoint(mobile){
+        font-size: 17.3px;
+        line-height: 17.3px;
+      }
+    }
+    .order-receipt{
+      font-size: 16px;
+      line-height: 20px;
+      font-family: $SimonCircularBook;
+      padding-top: 10px;
+      @include breakpoint(mobile){
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+  }
+  .account-created-heading{
+    padding-bottom: 30px;
+    @include breakpoint(desktop) {
+      margin-right: 49px;
+    }
+    .account-success-text {
+      font-size: 19.1px;
+      line-height: 19.1px;
+      letter-spacing: -0.2px;
+      font-family: $SimonCircularBold;
+      @include breakpoint(mobile){
+        font-size: 17.3px;
+        line-height: 17.3px;
+      }
+    }
+    .account-success-confirm{
+      font-size: 16px;
+      line-height: 20px;
+      font-family: $SimonCircularBook;
+      padding-top: 10px;
+      @include breakpoint(mobile){
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+  }
+  .account-already-exist{
+    padding-bottom: 30px;
+    @include breakpoint(desktop) {
+      margin-right: 49px;
+    }
+    .already-exist-text {
+      font-size: 19.1px;
+      line-height: 19.1px;
+      letter-spacing: -0.2px;
+      font-family: $SimonCircularBold;
+      @include breakpoint(mobile){
+        font-size: 17.3px;
+        line-height: 17.3px;
+      }
+    }
+    .already-exist-msg{
+      font-size: 16px;
+      line-height: 20px;
+      font-family: $SimonCircularBook;
+      padding-top: 10px;
+      @include breakpoint(mobile){
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+      >a{
+        color: $black;
+        text-decoration: underline;
+      }
+    }
+
+  }
+  .confirmation-create-account{
+    padding-bottom: 30px;
+    @include breakpoint(desktop) {
+      margin-right: 49px;
+    }
+    .create-account-heading {
+      font-size: 19.1px;
+      line-height: 19.1px;
+      letter-spacing: -0.2px;
+      font-family: $SimonCircularBold;
+      @include breakpoint(mobile){
+        font-size: 17.3px;
+        line-height: 17.3px;
+      }
+    }
+    .create-account-msg{
+      font-size: 16px;
+      line-height: 20px;
+      font-family: $SimonCircularBook;
+      padding-top: 10px;
+      padding-bottom: 30px;
+      @include breakpoint(mobile){
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+    .btn-create-account {
+      margin-top: 15px;
+    }
+    .btn-size{
+      @include breakpoint(mobile){
+        width: 100%;
+      }
+    }
+  }
+  .shipping-payment-method{
+    border-top: 1px solid $gray;
+    @include breakpoint(desktop) {
+      margin-right: 52px;
+    }
+    padding: 25px 0;
+    @include breakpoint(mobile){
+      margin-right: 0;
+    }
+    .shipping-heading {
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: -0.2px;
+      font-family: $SimonCircularBold;
+      padding-bottom: 20px;
+      @include breakpoint(mobile){
+        font-size: 14.4px;
+        line-height: 14.4px;
+        letter-spacing: -0.1px;
+      }
+    }
+    .payment-heading{
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: -0.2px;
+      font-family: $SimonCircularBold;
+      padding-bottom: 20px;
+      @include breakpoint(mobile){
+        font-size: 14.4px;
+        line-height: 14.4px;
+        letter-spacing: -0.1px;
+        padding-top: 40px;
+      }
+    }
+    .shipping-address{
+      font-size: 16px;
+      line-height: 20px;
+      font-family: $SimonCircularBook;
+      @include breakpoint(mobile){
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+    .payment-method{
+      font-size: 16px;
+      line-height: 20px;
+      font-family: $SimonCircularBook;
+      @include breakpoint(mobile){
+        font-size: 14.4px;
+        line-height: 18px;
+      }
+    }
+  }
+  .checkout-item-heading{
+    padding-bottom: 20px;
+    .item-heading{
+      font-size: 13.3px;
+      line-height: 16.6px;
+      font-family: $SimonCircularBook;
+      color:$text-link;
+    }
+    .price-heading{
+      font-size: 13.3px;
+      line-height: 16.6px;
+      font-family: $SimonCircularBook;
+      color:$text-link;
+    }
+    .total-heading{
+      font-size: 13.3px;
+      line-height: 16.6px;
+      font-family: $SimonCircularBook;
+      color:$text-link;
+      float: right;
+    }
+  }
+  .row-pad-l{
+    padding-left: 30px;
+    @include breakpoint(mobile){
+      padding-left: 50px;
+    }
+  }
+  .subtotal{
+    float: right;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.2px;
+    font-family: $SimonCircularBold;
+    @include breakpoint(mobile){
+      padding-top: 45px;
+    }
+  }
+  .price-container-left{
+    @include breakpoint(mobile) {
+      padding-left: 0;
+    }
+  }
+  .order-summary-right{
+    margin-top: 0;
+  }
+  .order-summary-bottom{
+    padding-bottom: 0;
+    @include breakpoint(mobile){
+      padding-bottom: 30px;
+    }
+    .btn {
+      @include breakpoint(mobile) {
+        display: none;
+      }
+    }
+  }
+  .checkout-banner-bottom{
+    margin: 40px 0 100px 0;
+    position: relative;
+    > a {
+      display: block;
+    }
+    .content-container {
+      text-align: left;
+      @include breakpoint(desktop) {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        margin-left: 40px;
+      }
+
+      @include breakpoint(mobile) {
+        text-align: left;
+        top: 0;
+        transform: inherit;
+        padding: 37px 0 0 25px;
+        position: absolute;
+      }
+      .display-medium {
+        color: $black;
+      }
+      .shopnow {
+        color: $black;
+        font-size: 19.1px;
+        line-height: 19.1px;
+        letter-spacing: -0.2px;
+        font-family: $SimonCircularBold;
+        padding-top: 26px;
+        display: inline-block;
+        > span {
+          height: 23px;
+          overflow: hidden;
+          display: inline-block;
+          font-size: 27.6px;
+          line-height: 27.6px;
+          padding-left: 10px;
+
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,382 @@
+/* MOBILE & DEFAULT STYLES
+ *************************************************************/
+
+.checkout{
+    .checkout-footer-icons{
+    float:right;
+    margin-right:15px;
+    @include breakpoint(mobile){
+      float:none;
+      padding:25px;
+      .icons{
+        float:left;
+      }
+      .antivirus-icon{
+        float:right;
+      }
+    }
+}
+
+
+}
+
+.join-vip-club{
+  font-family: $SimonCircularBold;
+  line-height: 21px;
+  letter-spacing: 0.6px;
+  height:23px;
+  text-align: center;
+  color: $white;
+  background:$black;
+  a{
+    font-size: 11.1px;
+    color:$white;
+  }
+}
+
+.footer-link-wrapper{
+  padding: 35px 0;
+}
+
+.footer-social{
+  a{
+    height:26px;
+    width:26px;
+    display:block;
+    margin-right:31px;
+    float:left;
+    svg{
+      vertical-align: middle;
+    }
+    &:hover{
+      svg{
+        path{
+          transition: fill 150ms ease;
+          fill:$text-link;
+          &.fillwhite{
+            fill:$white;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+.footer-top-border{
+  border-top:1px solid $gray;
+  padding-top:28px;
+}
+
+.disclaimer-copy{
+  padding-top: 10px;
+  position:relative;
+
+  > span,
+  .custom-checkbox{
+    float: left;
+    display: block;
+  }
+
+  > span{
+    width: calc(100% - 26px);
+  }
+  .sign-up-policy{
+    padding-left: 26px;
+    clear: both;
+  }
+}
+
+.find-outlet{
+  a{
+    font-family:$SimonCircularBold;;
+    text-transform: uppercase;
+    font-size:13.3px;
+    line-height:13.3px;
+    color:$black;
+    &:before{
+      @include simonicon($icon-search);
+      height: 20px;
+      width: 22px;
+      float: left;
+      margin-right: 10px;
+      font-size: 21px;
+      padding-top: 4px;
+    }
+    &:hover{
+      color: $gray;
+    }
+  }
+}
+
+.footer-top-border{
+  > div{
+    @include breakpoint(mobile){
+      div.simon-footer-links:last-child{
+        border-bottom: 1px solid $gray;
+      }
+    }
+  }  
+}
+.simon-footer-links{
+  ul{
+    margin:6px 0;
+    padding:0;
+    li{
+      list-style: none;
+      color:$text-link;
+      line-height:23px;
+      font-size:16px;
+    }
+  }
+}
+
+.footer-terms{
+    font-family:$SimonCircularBook;
+    font-size:13.3px;
+    line-height:16.6px;
+    padding:53px 0 25px 0;
+    color:$black;
+    p{
+      font-family:$SimonCircularBook;
+      font-size:13.3px;
+      line-height:16.6px;
+      color:$black;
+    }
+    a{
+      color:$black;
+      font-family:$SimonCircularBook;
+      font-size:13.3px;
+      line-height:16.6px;
+      text-decoration:underline;
+    }
+}
+
+.footer-cookies{
+  background-color: $black;
+  overflow: hidden;
+  opacity: 0.8;
+  width:100%;
+  position: fixed;
+  bottom: 0px;
+  z-index:10;
+  padding-bottom:30px;
+}
+
+.footer-cookies-about{
+  font-family:$SimonCircularBold;
+  color: $white;
+  font-size:16px;
+  line-height:20px;
+  padding-top:25px;
+  letter-spacing: -0.2px;
+}
+.footer-cookies-term{
+  font-family:$SimonCircularBook;
+  font-size: 13.3px;
+  color: $white;
+  line-height:16.6px;
+  padding-top:10px;
+  a{
+    color:$white;
+    font-size:13.3px;
+    text-decoration:underline;
+  }
+}
+
+.modal-content {
+  border:0;
+  @include breakpoint(mobile){
+    min-height: 100vh;
+  }
+}
+
+.modal-header{
+   height: 69px;
+   padding: 0;
+   background-color: $gray-light;
+   border-bottom: 0;
+}
+
+.modal-title{
+  padding: 23px 0 23px 30px;
+  font-size: 19.1px;
+  font-family: $SimonCircularBold;
+  line-height: 23.9px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  color: $black;
+}
+
+.modal-header .close{
+  margin-top: -46px;
+  margin-right: 24px;
+  font-size: 23px;
+  color: $black;
+  &:before{
+    @include simonicon($icon-close-large);
+  }
+  height: 22px;
+  width: 22px;
+  opacity: 1;
+  outline: 0;
+}
+
+.modal-footer{
+  border-top: 0;
+  padding: 30px;
+}
+
+.modal-body{
+  padding: 0;
+}
+
+.sign-up-content{
+  font-family: $SimonCircularBook;
+  font-size: 16px;
+  line-height: 20px;
+  color: $black;
+  padding: 30px;
+  .heading-margin{
+    margin-bottom: 0;
+  }
+}
+
+
+.sign-up-policy{
+  font-family: $SimonCircularBook;
+  font-size: 13.3px;
+  line-height: 16.6px;
+  color: $text-link;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  a{
+    //color:$gray;
+    font-size:13.3px;
+    text-decoration:underline;
+    &:hover{
+      color:$black;
+    }
+  }
+}
+
+.footer-running-text{
+  padding: 70px 0;
+  font-family: $SimonCircularBook;
+  font-size: 13.3px;
+  line-height: 16.6px;
+  color: $text-link;
+}
+
+
+/* DESKTOP VIEW PORT
+*************************************************************/
+@include breakpoint(desktop) {
+  .simon-footer-links{
+    padding-right:0;
+    ul{
+      &.mobile-acc-links.collapse{
+        display:block;
+        visibility: visible;
+      }
+    }
+  }
+  .footer-emai-signup{
+    > p {
+      padding-bottom: 10px;
+    }
+  }
+
+}
+
+/* MOBILE VIEW PORT
+*************************************************************/
+@include breakpoint(mobile) {
+  .simon-footer-links {
+    border-top: 1px solid $gray;
+    h6 {
+      font-family: $SimonCircularBook;
+    }
+    ul {
+      margin-top: 0;
+      li {
+        padding: 10px 0 10px 10px;
+        &:last-child {
+          padding-bottom: 25px;
+        }
+      }
+    }
+  }
+    .footer-email-signup {
+      padding-top: 28px;
+      padding-bottom: 20px;
+      width: 100%;
+    }
+    .btn-width {
+      width: 100%;
+    }
+    
+  .mobile-footer-accordian{
+    cursor:pointer;
+    color:$gray;
+    padding:20px 0 20px 10px;
+    &:after{
+      @include simonicon($icon-arrordion-plus);
+      float: right;
+      font-size: 11px;
+      padding-right: 10px;
+    }
+    background-position: top 24px right 10px;
+    background-size: 10px 10px;
+    &.minus-icon{
+      color:$black;
+      font-family: $SimonCircularBold;
+      &:after{
+        @include simonicon($icon-arrordion-minus);        
+      }      
+    }
+  }
+  .footer-cookies-term{
+    font-size:12px;
+    line-height:15px;
+    padding-bottom:30px;
+  }
+  .footer-terms{
+    padding-top: 34px;
+    color: $text-link;
+    a {
+      color: $black;
+      &:hover{
+        color:$text-link;
+      }
+    }
+  }
+  .footer-top-border{
+      padding-top:0;
+      border:0;
+  }
+
+  .footer-social{
+    padding-left:15px;
+    text-align:center;
+    margin:0;
+    a{
+      float: none;
+      display:inline-block;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+
+  .modal-header .close{
+    height: 24px;
+    width: 24px;
+  }
+
+  .modal-dialog{
+    margin: 0;
+  }
+
+}

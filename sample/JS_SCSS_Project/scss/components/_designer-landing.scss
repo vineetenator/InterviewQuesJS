@@ -1,0 +1,130 @@
+.designer-landing {
+  .owl-carousel {
+    padding-top: 0;
+  }
+  .designer-listing-banner {
+    margin-top: -40px;
+    @include breakpoint(mobile){
+      margin: 0;
+    }
+  }
+  .style-deals{
+    margin-top: 60px;
+  }
+  .custom-heading-links-component{
+    @include breakpoint(mobile){
+      padding-bottom: 35px;
+    }
+    .btn{
+      display: none;
+    }
+  }
+  .designer-deals-container{
+    @include breakpoint(mobile) {
+      .img-responsive {
+        display: none;
+      }
+    }
+  }
+  .designer-carousal {
+    .carousel-content {
+      .display-large {
+        @include breakpoint(desktop) {
+          font-size: 82.3px !important;
+          line-height: 63.4px !important;
+          letter-spacing: -4.9px !important;
+          margin-bottom: 30px !important;
+        }
+      }
+      h1{
+        @include breakpoint(mobile){
+          margin-bottom: 20px;
+        }
+      }
+      h5{
+        margin-top: 35px;
+        a{
+          font-family: $SimonCircularBold;
+          margin-right: 0;
+          @include breakpoint(mobile){
+            display: inherit;
+            padding-bottom: 20px;
+            &:nth-child(3) {
+              margin-top: 0;
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .designer-shop {
+    h4 {
+      margin-top: 20px;
+      span{
+        margin-left: 8px;
+        font-size: 33px;
+        vertical-align: text-top;
+      }
+    }
+    .img-margin-top{
+      margin-top: 44px;
+      @include breakpoint(mobile){
+        margin-top: 38px;
+      }
+    }
+    .designer-text {
+      padding: 60px 0;
+      @include breakpoint(mobile){
+        padding: 40px 0;
+      }
+      .designer {
+        font-family: $SimonCircularBold;
+        font-size: 57.2px;
+        line-height: 44px;
+        letter-spacing: -3.4px;
+        margin-right: 10px;
+        @include breakpoint(mobile){
+          font-size: 43px;
+          line-height: 33.1px;
+          letter-spacing: -2.6px;
+        }
+      }
+      .edit {
+        font-family: $SimonCircularBold;
+        font-size: 57.2px;
+        line-height: 44px;
+        letter-spacing: -3.4px;
+        color: $gray;
+        @include breakpoint(mobile){
+          font-size: 43px;
+          line-height: 33.1px;
+          letter-spacing: -2.6px;
+        }
+      }
+      .designer-collection {
+        font-family: $SimonCircularBook;
+        font-size: 16px;
+        line-height: 23px;
+        margin-top: 20px;
+        @include breakpoint(mobile){
+          font-size: 14.4px;
+          line-height: 20.7px;
+        }
+        a {
+          color: $black;
+          cursor: pointer;
+          text-decoration: underline;
+          &:hover {
+            color: $gray;
+          }
+        }
+      }
+    }
+    .img-margin {
+      @include breakpoint(desktop) {
+        margin-top: -200px;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.checkout-verify-address-modal {
+	.checkout-verify-container {
+		padding: 30px;
+		.verification-text {
+			margin-bottom: 37px;
+			position: relative;
+			margin-left: 30px;
+			@include breakpoint(mobile) {
+				margin-bottom: 30px;
+			}
+			&:before {
+				@include simonicon($icon-verify-icon);
+				color: $plum;
+				font-size: 20px;
+    			padding-right: 10px;
+    			position: absolute;
+    			left: -30px;
+				@include breakpoint(mobile) {
+    				top: 7px;
+				}
+			}
+		}
+		.content {
+			h6 {
+				margin-bottom: 8px;
+			}
+			input[type="radio"] {
+				float: left;
+				margin-right: 12px;
+			}
+			p {
+				float: left;
+			}
+		}
+		.edit-address-btn {
+			clear: both;
+			padding: 20px 0 48px;
+
+			.btn {
+				@include breakpoint(mobile) {
+					width: 100%;
+				}
+				&:last-child {
+					@include breakpoint(desktop) {
+						margin-left: 5px;
+					}
+					@include breakpoint(mobile) {
+						margin-top: 15px;
+					}
+				}
+			}
+		
+		}
+	}
+}

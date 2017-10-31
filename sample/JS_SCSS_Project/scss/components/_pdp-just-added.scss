@@ -1,0 +1,128 @@
+#justAddedModal {
+	.modal-dialog {
+		width: 535px;
+		@include breakpoint(mobile) {
+			width: inherit;
+		}
+	}
+}
+
+.just-added {
+	.just-added-items {
+		padding: 30px;
+
+		.redirecttocheckout{
+			 margin: 15px 0;
+		}
+		.thumbnail {
+			width: inherit;
+			& + .col-xs-8 {
+			    top: -3px;
+			    padding-left: 10px;
+			}
+			img {
+				width: 105px;
+				@include breakpoint(mobile) {
+					width: 84px;
+				}
+			}
+			.add-to-favorites {
+		    	>a {
+			    	width: 20px;
+			    	height: 20px;
+					position: absolute;
+					top: 0;
+					right: 15px;
+		    	}
+			}
+		}
+		.price-container {
+			.heading {
+
+			}
+			.price-off {
+				font-family: $SimonCircularBook;
+				color: $plum;
+				margin-top: 4px;
+			}
+
+			.inner-price-container {
+				margin: 7px 0;
+				.actual-price {
+					font-family: $SimonCircularBold;
+					color: $plum;
+					.tooltip-icon {
+						width: 13px;
+						height: 13px;
+						display: inline-block;
+						&:before {
+							@include simonicon('\e91d');
+							font-size: 13px;
+							color: $gray;
+						}
+					}
+				}
+				.off{
+					margin-bottom: 10px;
+				}
+				.off,
+				.product-variant{
+					text-transform: capitalize;
+				}
+			}
+			.select-quantity {
+			    margin-top: 10px;
+				.plus-minus {
+					img {
+						width: 25px;
+					}
+					.quantity {
+						width: 36px;
+						height: 25px;
+						line-height: 20px;
+					}
+					a {
+						width: 25px;
+						height: 25px;
+						line-height: 24px;
+    					font-size: 14px;
+					}
+				}
+
+				h6{
+					font-family: "SimonCircular-Book";
+				}
+			}
+		}
+
+		.conditions {
+			margin: 20px 0 10px;
+			p {
+				margin: 0;
+				color: $text-link;
+			}
+		}
+		.item-total-container {
+			margin-top: 28px;
+			margin-bottom: 30px;
+			.total-amount {
+				color: $plum;
+			}
+		}
+		.btn-container  {
+			>button {
+				width: 100%;
+				margin: 0;
+				&.plum{
+					margin-top: 15px;
+				}
+			}
+			.view-my-bag {
+				margin-top: 20px;
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

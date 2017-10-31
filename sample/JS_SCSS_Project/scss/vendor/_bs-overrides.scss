@@ -1,0 +1,24 @@
+// Bootstrap !default Overrides (no touchy!)
+
+//$icon-font-path: '/assets/components/bootstrap-sass-official/assets/fonts/bootstrap/';
+$icon-font-path: '../bower_components/bootstrap/fonts/';
+$grid-gutter-width: 30px;
+$screen-md: 960px;
+
+$screen-lg: 1200px;
+
+//== Container sizes
+//## Override the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             ((744px + $grid-gutter-width));
+$container-sm:                 $container-tablet;
+
+// Medium screen / desktop
+$container-desktop:            ((936px + $grid-gutter-width));
+$container-md:                 $container-desktop;
+
+// Large screen / wide desktop
+$container-large-desktop:      ((1100px + $grid-gutter-width));
+$container-lg:                 $container-large-desktop;
+$nav-link-hover-bg : #fff;

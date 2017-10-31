@@ -1,0 +1,38 @@
+.search-result {
+  @include breakpoint(desktop) {
+    padding-bottom: 20px;
+  }
+  @include breakpoint(mobile) {
+    padding-bottom: 30px;
+  }
+  .result-for {
+    display: inline-block;
+    font-family: $SimonCircularBook;
+    font-size: 33.1px;
+    line-height: 33.1px;
+    letter-spacing: -1px;
+    @include breakpoint(mobile) {
+      font-size: 29.9px;
+      line-height: 29.9px;
+      letter-spacing: -0.9px;
+    }
+  }
+  .search-term {
+    padding-left: 5px;
+    display: inline-block;
+    font-family: $SimonCircularBold;
+    font-size: 33.1px;
+    line-height: 33.1px;
+    letter-spacing: -1px;
+    @include breakpoint(mobile) {
+      font-size: 29.9px;
+      line-height: 29.9px;
+      letter-spacing: -0.9px;
+    }
+  }
+}
+.plp-filters {
+  .filters {
+    padding-bottom: 10px;
+  }
+}

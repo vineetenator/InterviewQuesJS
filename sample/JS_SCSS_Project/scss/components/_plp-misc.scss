@@ -1,0 +1,31 @@
+.product-list{    
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.load-more-btn-wrapper{
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+.plp-top-banner {
+	.container {
+		width: 100%;
+	}
+}
+
+.content-spot {
+	margin-bottom: 40px;
+	@include breakpoint(mobile) {
+		margin: 40px 0 0;
+	}
+	h4 {
+		margin-top: 20px;
+		@include breakpoint(mobile) {
+			margin-bottom: 20px;
+		}
+	}
+	img {
+		width: 100%;
+	}
+}

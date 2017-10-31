@@ -1,0 +1,32 @@
+/// Helper to size an element
+/// @author Hugo Giraudel
+/// @param {Length} $width
+/// @param {Length} $height
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+/// Helper for transitions
+/// Better to use Bourbon
+@mixin transition ($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+/// Helper for transforms
+/// Better to use Bourbon
+@mixin transform ($transform) {
+    -webkit-transform: $transform;
+    -ms-transform: $transform;
+    -moz-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+// Helper that overrides that global variable.
+@mixin global-variable-overriding {
+    $variable: 'mixin value' !global;
+}

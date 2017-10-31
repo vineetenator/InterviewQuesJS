@@ -1,0 +1,11 @@
+@import "variables/all";
+@import "utils/all";
+@import "vendor/bootstrap/mixins";
+
+.cart {
+  @import 'components/global-custom-components';
+  @import 'components/cart-with-items';
+  @import 'components/cart-order-summary';
+  @import 'components/cart-with-empty-items';
+  @import 'components/cart-edit-items';
+}

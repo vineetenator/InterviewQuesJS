@@ -1,0 +1,102 @@
+.navbar .login-area, #globalLoginModal {
+	.links-container {
+		margin-bottom: 26px;
+	}
+	.sm-input-group {
+		margin-right: 10px;
+	}
+	.sm-form-control {
+		padding-bottom: 30px;
+		padding-top: 0;
+		margin-bottom: 30px;
+		border-bottom: 1px solid $gray;
+	}
+	.size-guide-content {
+		p {
+			font-size: 13px;
+			line-height: 13px;
+			margin-top: 5px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.navbar{
+	.login-area{
+		padding: 0;
+		.sign-up-content{
+			width:370px;
+			a{
+				color: $text-link;
+				text-decoration: underline;
+				font-size: 16px;
+				line-height: 20px;
+				font-family: $SimonCircularBook;
+				&:hover{
+					color: $black;
+				}
+			}
+			.navbar-login{
+				width:100%;
+			}
+			p{
+				font-size: 16px;
+				line-height: 20px;
+				font-family: $SimonCircularBook;
+				margin-top: 8px;
+				margin-bottom: 30px;
+			}
+			input[type="checkbox"]{
+				margin: 2px 0 0;
+			}
+
+		}
+	}
+}
+
+// Checkout Form
+.global-login {
+	padding: 115px 0 55px;
+	@include breakpoint(mobile) {
+		padding: 41px 0;		
+	}
+	.global-login-containers {
+		&:first-child {
+			@include breakpoint(mobile) {
+				margin-bottom: 60px;		
+			}
+		}
+		h3 {
+			margin-bottom: 28px;
+			@include breakpoint(mobile) {
+				margin-bottom: 10px;		
+			}
+			@include breakpoint(mobile) {
+				font-size: 24.9px;			
+			}
+		}
+		.links-container {
+			margin-bottom: 28px;
+			.custom-checkbox{
+				float:left;
+			}
+			.stay-loggedin {
+				line-height: 22px;
+				float:left;
+			}
+		}
+		.guest-btn {
+			margin-top: 20px;
+		}
+		.btn {
+			@include breakpoint(mobile) {
+				width: 100%;		
+			}
+		}
+
+		.forgot-password{
+			text-decoration: underline;
+		}
+
+	}	
+}

@@ -1,0 +1,126 @@
+// Breadcrumbs
+.checkout-breadcrumb {
+	padding: 30px 0 20px;
+	ul {
+		padding: 0;
+    	list-style: none;
+
+		li {
+			display: inline-block;
+			color: $text-link;
+			&:first-child {
+				&:before {
+					display: none;
+				}
+				&.checked {
+					&:before {
+						display: inline-block;
+						@include simonicon('\e90d');
+						color: $text-link;
+						font-size: 9px;
+						padding: 0 7px 0 0;
+						position: relative;
+						top: -1px;
+					}
+				}
+			}
+			&:before {
+				@include simonicon('\e908');
+				color: $text-link;
+				font-size: 12px;
+				padding: 0 19px 0 16px;
+			}
+			a {
+				color: $text-link;
+				&:hover {
+					color: $black;
+				}
+			}
+			&.active {
+				color: $black;
+				a {
+					color: $black;
+				}
+			}
+			&.checked {
+				&:before {
+					@include simonicon('\e90d');
+					color: $text-link;
+					font-size: 9px;
+					padding: 0 7px 0 16px;
+					position: relative;
+					top: -1px;
+				}
+			}
+		}
+	}
+}
+
+
+// select drop down
+.sm-input-group select.form-control {
+    height: 52.9px;
+}
+
+
+
+// Checkout Header
+.secure-shopping {
+	color: $white;
+	font-size: 13.3px;
+	font-family: $SimonCircularBold;
+	margin-top: 5px;
+	letter-spacing: 0.7px;
+	&:before {
+		@include simonicon('\e920');
+	    position: absolute;
+	    left: -5px;
+	    top: -1px;
+	    font-size: 19px;
+	    padding: 0 !important;
+	}
+}
+
+
+// Checkout Footer
+.footer-top-border {
+	padding-top: 34px;
+	border-width: 1px;
+}
+.checkout-social-icons {
+	
+	@include breakpoint(desktop) {
+		margin-right: 10px;
+		float: right;
+		text-align: right;
+	}
+	@include breakpoint(mobile) {
+		border-top: 1px solid $gray;
+		padding: 20px 15px 20px;
+	}
+	.social-icons {
+		.icons {
+			img {
+				margin-left: 6px;
+			}
+			@include breakpoint(mobile) {
+				float: right;
+			}
+		}
+		.antivirus-icon {
+			margin: 20px 5px 0 0;
+			@include breakpoint(mobile) {
+				margin-top: 5px;
+				float: left;
+			}
+		}
+	}
+	
+}
+
+// Checkout spacing from right
+.spacing-right {
+	@include breakpoint(desktop){
+		padding-right: 50px;
+	}
+}

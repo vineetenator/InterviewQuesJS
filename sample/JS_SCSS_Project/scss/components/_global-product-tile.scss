@@ -1,0 +1,242 @@
+.product-container{
+    .item-tile {
+        padding: 15px 25px 15px 15px;
+        border: 1px solid transparent;
+
+        &:nth-of-type(3n+1){
+          @include breakpoint(desktop){
+            clear:left;
+          }
+        }
+        
+        .item-retailer {
+          @include breakpoint(mobile){
+            display: none;
+          }
+        }
+        &:hover{
+            border-color: $gray;
+            .item{
+                //margin: -1px;
+            }
+            .item-retailer {
+              display: none;
+            }
+            .color-switches-carousal {
+              @include breakpoint(desktop){
+                visibility: visible;
+                height: 30px;
+              }
+            }
+        }
+    }
+
+
+
+// Tiles hover color carousal
+.color-switches-carousal {
+  margin-top: 16px;
+  margin-bottom: 6px;
+  visibility: hidden;
+  height: 0;
+  @include breakpoint(mobile){
+    visibility: visible;
+    height: inherit;
+  }
+
+  &.color-switches-mobile {
+    margin-top: 10px;
+    .item {
+      display: inline-block;
+      padding-right: 4px;
+      .color-switches {
+        display: inline-block;
+        width: 20px;
+        height: 14px;
+      }
+      &:nth-child(n+4) {
+        display: none;
+      }
+    }
+    .count {
+      float: right;
+    }
+  }
+  .slick-list {
+    width: calc(100% - 35px);
+    margin: auto;
+    .item {
+      .color-palette {
+        text-align: center;
+        .color-switches {
+          width: 30px;
+          height: 21px;
+          display: inline-block;
+          margin-bottom: 5px;
+          cursor: pointer;
+          &:hover {
+            &:after {
+              content: "";
+              clear: both;
+              display: block;
+              width: 100%;
+              background: $black;
+              height: 4px;
+              margin-top: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .slick-arrow {
+    color: $gray;
+    background: none;
+      border: 0;
+      position: absolute;
+      top: -3px;
+      padding-top: 4px;
+      font-size: 20px;
+      &.slick-prev {
+        left:0;
+        padding-left: 0;
+        &:before {
+          @include simonicon($icon-arrow-back);
+        }
+      }
+      &.slick-next {
+        right:0;
+        padding-right: 0;
+        &:before {
+          @include simonicon($icon-arrow-fwd);
+        }
+      }
+      
+  }
+}
+
+    .item-responsive{
+      @include breakpoint(mobile){
+        &.col-xs-6{
+          padding: 15px;
+          &:nth-child(2n+1){
+            clear: both;
+          }
+        }
+      }
+    }
+    .fav-icon{
+        position: absolute;
+        right: 0px;
+        color: $text-link;
+        &:before {
+          @include simonicon($icon-favorites-blank);
+          font-size: 22px;
+        }
+        &.active{
+        color: $plum;
+            &:before {
+              content: $icon-fav-filled;
+            }
+        }
+    }
+
+    .item {
+        position: relative;
+    
+        @include breakpoint(mobile) {
+          padding-bottom: 8px;
+        }
+
+        > a{
+          max-width: 200px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        .item-name {
+          font-size: 16px;
+          line-height: 20px;
+          color: $black;
+          font-family: $SimonCircularLight;
+          padding-top: 12.2px;
+          @include breakpoint(mobile) {
+            font-size: 14.4px;
+            line-height: 18px;
+          }
+        }
+        .item-retailer {
+          font-size: 16px;
+          line-height: 19px;
+          color: $black;
+          font-family: $SimonCircularLight;
+          padding-top: 10px;
+        }
+        .item-color {
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: -0.2px;
+          > a {
+            color: $black;
+            font-family: $SimonCircularBold;
+          }
+          @include breakpoint(mobile) {
+            font-size: 14.4px;
+            line-height: 14.4px;
+            letter-spacing: -0.1px;
+          }
+        }
+        .item-discrition {
+          font-size: 16px;
+          line-height: 20px;
+          color: $black;
+          font-family: $SimonCircularBook;
+          padding-top: 12px;
+          text-decoration: line-through;
+          @include breakpoint(mobile) {
+            font-size: 14.4px;
+            line-height: 18px;
+          }
+    
+        }
+        .item-price {
+          font-size: 16px;
+          line-height: 20px;
+          color: $plum;
+          font-family: $SimonCircularBold;
+          img {
+            margin-left: 5px;
+            margin-bottom: 4px;
+            height: 10px;
+            cursor: pointer;
+          }
+          @include breakpoint(mobile) {
+            font-size: 14.4px;
+            line-height: 14.4px;
+            letter-spacing: -0.1px;
+          }
+        }
+        .item-revised-price {
+          font-size: 16px;
+          line-height: 20px;
+          color: $black;
+          font-family: $SimonCircularBook;
+          @include breakpoint(mobile) {
+            font-size: 14.4px;
+            line-height: 18px;
+          }
+        }
+        .item-discount {
+          font-size: 16px;
+          line-height: 20px;
+          color: $black;
+          font-family: $SimonCircularLight;
+          @include breakpoint(mobile) {
+            font-size: 14.4px;
+            line-height: 18px;
+          }
+        }    
+    }
+}

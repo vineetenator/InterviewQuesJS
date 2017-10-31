@@ -1,0 +1,221 @@
+.breadcrumbs{
+	padding: 28px 15px;
+}
+.my-account{
+	margin: 30px 0;
+}
+.other-links{
+	padding: 40px 0 100px ;
+	ul{
+		a{
+			font-size: 13.3px;
+			line-height: 16.6px;
+			color: #757575;
+		}
+		list-style: none;
+	    display: inline-block;
+	    padding-left: 0;
+	}
+}
+.profile-update-msg{
+	padding: 10px 0;
+	font-size: 13.3px;
+	line-height: 1.25;
+	font-family: "SimonCircular-Book";
+	border-bottom: 1px solid #9f005b;
+	&:before{
+		@include simonicon($icon-check-circle);
+		margin-right: 10px;
+		font-size: 20px;
+		color: #9f005b;
+		vertical-align: middle;
+	}
+}
+.banner{
+	position: relative;
+	.img-caption{
+		@include breakpoint(desktop) {
+			position: absolute;
+			bottom: 100px;
+			left: 170px;
+			width: 500px;
+		}
+		@include breakpoint(mobile) {
+			padding-top: 30px;
+		}
+		h1{
+			font-size: 82.3px;
+			font-family: "SimonCircular-Bold";
+			line-height: 0.77;
+			letter-spacing: -4.9px;
+			text-align: left;
+			padding-bottom: 30px;
+			text-transform: uppercase;
+			@include breakpoint(mobile) {
+				font-size: 51.6px;
+				line-height: 0.77;
+				letter-spacing: -3.1px;
+			}
+		}
+		p{
+			font-size: 19.1px;
+			line-height: 1.25;
+			letter-spacing: -0.2px;
+			@include breakpoint(mobile) {
+				font-size: 17.3px;
+				text-align: center;
+			}
+		}
+	}
+}
+.myprofile-container{
+	padding-top: 60px;
+	@include breakpoint(mobile) {
+		padding-top: 35px;
+	}
+	.panel-default {
+	    border: none;
+	    box-shadow: none;
+	    padding-bottom: 30px;
+	    .panel-title{
+	    	padding-bottom: 14px;
+	    	a{
+	    		font-family: "SimonCircular-Bold";
+				font-size: 19.1px;
+				line-height: 1;
+				letter-spacing: -0.2px;
+				@include breakpoint(mobile) {
+					font-size: 17.3px;
+					line-height: 17.3px;
+				}
+	    	}
+	    }
+	    .panel-collapse {
+		    border-top: 1px solid #B4B2B0;
+		    padding-top: 20px;
+    		font-size: 16px;
+    		line-height: 1.25;
+    		font-family: "SimonCircular-Book";
+    		input[type="text"],select{
+    			font-family: "SimonCircular-Book";
+    			text-transform: uppercase;
+    		}
+    		.instruction-msg{
+    			font-size: 16px;
+  				line-height: 1.25;
+  				padding-bottom: 20px;
+				@include breakpoint(mobile) {
+					font-size: 14.4px;
+					line-height: 18px;
+				}
+    		}
+    		a{
+				text-decoration: underline;
+				color: #000;
+    		}
+    		label{
+    			font-weight: normal;
+    			margin: 0;
+				@include breakpoint(mobile) {
+    			    font-size: 14.4px;
+    			}
+    			input{
+    				padding-top: 0;
+    				margin-right: 10px;
+    			}
+    			.sm-input-group{
+					@include breakpoint(mobile) {
+						
+					}
+    			}
+    		}
+    		.select-menu {
+				select {
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;
+					-webkit-appearance: none;
+					-moz-appearance: none;
+				    height: 52.9px;
+				}
+				&:before {
+					color: $text-link;
+					@include simonicon('\e905');
+				    position: absolute;
+				    font-size: 10px;
+				    margin-top: 22px;
+				    right: 15px;
+				}
+			}
+			.submit-btn{
+				display: inline-block;
+				@include breakpoint(mobile) {
+					.btn{
+						width: 100%;
+					}
+				}
+			}
+			.terms-conditions {
+			    padding-top: 15px;
+				color: $text-link;
+				position: relative;
+				@include breakpoint(mobile) {
+					padding: 30px 15px 30px 15px;
+					text-align: left;
+				}
+				.security{
+					text-align: right;
+					&:before {
+						@include simonicon('\e920');
+					    position: absolute;
+					    margin-left: -25px;
+					    font-size: 20px;
+						@include breakpoint(desktop) {
+					    	bottom: 2px;
+						}
+					}
+				}
+		    	.faqs{
+					float: left;
+					color: #757575;
+					font-size: 16px;
+					line-height: 20px;
+					@include breakpoint(mobile) {
+				    	font-size: 14.4px;
+						line-height: 18px;
+					}
+		    	}
+			}
+		    .instructions{
+		    	ul{
+	    			font-family: "SimonCircular-Book";
+	    			padding-left: 30px;
+					@include breakpoint(mobile) {
+						margin-bottom: 30px;
+						font-size: 14.4px;
+					}
+					li{		
+						@include breakpoint(desktop) {
+							float: left;
+							width: 34%;
+						}
+					}
+		    	}
+		    }
+		    .form-fields{
+		    	@include breakpoint(desktop) {
+			    	padding-top: 40px;
+			    }
+		    }
+	    	.update-profile{
+	    		padding-bottom: 30px;
+	    	}
+		}
+		&.next-section{
+    		padding-top: 50px;
+	    	@include breakpoint(mobile) {
+		    	padding-top: 30px;
+		    }
+    	}
+	}
+}

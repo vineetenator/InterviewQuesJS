@@ -1,0 +1,56 @@
+.search-zero-result {
+  @include breakpoint(desktop){
+    padding-bottom: 60px;
+  }
+  @include breakpoint(mobile){
+    padding-bottom: 30px;
+  }
+
+  .no-result {
+    display: inline-block;
+    font-family: $SimonCircularBook;
+    font-size: 33.1px;
+    line-height: 33.1px;
+    letter-spacing: -1px;
+    @include breakpoint(mobile) {
+      font-size: 29.9px;
+      line-height: 29.9px;
+      letter-spacing: -0.9px;
+    }
+  }
+
+  .search-term {
+    padding-left: 5px;
+    display: inline-block;
+    font-family: $SimonCircularBold;
+    font-size: 33.1px;
+    line-height: 33.1px;
+    letter-spacing: -1px;
+    @include breakpoint(mobile) {
+      font-size: 29.9px;
+      line-height: 29.9px;
+      letter-spacing: -0.9px;
+    }
+  }
+}
+
+.plp-search-tile{
+  padding-bottom: 40px;
+  h3{
+    font-size: 27.6px;
+    line-height: 27.6px;
+    letter-spacing: -0.8px;
+    padding-bottom: 8px;
+    @include breakpoint(mobile) {
+      font-size: 24.9px;
+      line-height: 24.9px;
+      letter-spacing: -0.8px;
+    }
+  }
+
+  @include breakpoint(mobile){
+    .slick-dots{
+      bottom: 50px;
+    }
+  }
+}

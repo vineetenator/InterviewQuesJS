@@ -1,0 +1,11 @@
+@import "variables/all";
+@import "utils/all";
+@import "vendor/bootstrap/mixins";
+
+.myaccount {
+	@import 'components/create-account';
+	@import 'components/email-preferences';
+	@import 'components/myorders';
+	@import 'components/myprofile';
+	@import 'components/plp-left-nav';
+}

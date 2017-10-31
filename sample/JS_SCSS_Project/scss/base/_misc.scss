@@ -1,0 +1,101 @@
+/* Responsive Utilities
+***************************************************/
+
+.list-inline {
+    display: table;
+    >li {
+        display: table-cell;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.no-pad {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.no-pad-l {
+    padding-left: 0px !important;
+}
+
+.no-pad-r {
+    padding-right: 0px !important;
+}
+
+@include breakpoint(mobile) {
+    .no-pad-mobile {
+        padding: 0px;
+    }
+}
+
+.major {
+    text-transform: uppercase;
+}
+
+
+
+/* DESKTOP
+*************************************************************/
+
+@include breakpoint(desktop) {
+    .show-desktop {
+        display:block!important;
+    }
+
+    .hide-desktop {
+        display:none!important;
+    }
+
+    .show-mobile{
+        display:none!important;
+    }
+
+    .hide-mobile{
+        display:block!important;
+    }
+
+}
+
+
+/* Mobile
+*************************************************************/
+
+@include breakpoint(mobile) {
+     .show-desktop {
+        display:none!important;
+    }
+
+    .hide-desktop {
+        display:block!important;
+    }
+    .show-mobile{
+        display:block!important;
+    }
+
+    .hide-mobile{
+        display:none!important;
+    }
+
+    .container{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .xs-row{
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+}
+
+.no-scroll{
+    overflow: hidden;
+}
+
+.mobile-row{
+    @include breakpoint(mobile){
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}

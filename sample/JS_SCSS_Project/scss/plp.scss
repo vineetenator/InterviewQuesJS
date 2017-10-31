@@ -1,0 +1,395 @@
+@import "variables/all";
+@import "utils/all";
+@import "vendor/bootstrap/mixins";
+
+.plp {
+		@import 'components/global-custom-components';
+		@import 'components/global-page-heading-description-links';
+		@import 'components/global-product-tile';
+		@import 'components/plp-filter.scss';
+		@import 'components/plp-left-nav.scss';
+		@import 'components/plp-misc.scss';
+		@import 'components/search-zero-result.scss';
+		@import 'components/search-result.scss';
+		@import 'components/storefront-landing.scss';
+		@import 'components/designer-listing.scss';
+		@import 'components/designer-landing.scss';
+
+
+ 	// style override for clp of global custom component
+	.btn-category{
+		width: 100%;
+		margin-bottom: 35px;
+		.btn{
+			width: 100%;
+		}
+	}
+	.page-heading{
+		@include breakpoint(mobile){
+			font-size: 25px;
+			line-height: 25px;
+			letter-spacing: -0.8px;
+			padding-top: 30px;
+		}
+	}
+	.clp-container{
+		.container{
+			width:100%;
+			padding:0;
+		}
+	}
+	.category-landing {
+		.owl-carousel {
+			.the-designer-shop {
+				&.left{
+				@include breakpoint(desktop) {
+					h1{
+						font-size: 57.2px;
+						line-height: 44px;
+						letter-spacing: -3.4px;
+						padding-left: 20px;
+						margin-bottom: 20px;
+					}
+					h5{
+						padding-left: 20px;
+					}
+				}
+				@include breakpoint(mobile) {
+					h1{
+						font-size: 43px;
+						line-height: 33px;
+						letter-spacing: -2.6px;
+						padding-left: 0;
+						margin-bottom: 20px;
+					}
+					h5{
+						padding-left: 0;
+					}
+				}
+				}
+			}
+			@include breakpoint(desktop) {
+				padding-top: 55px;
+			}
+			&.slick-initialized {
+				margin-bottom: 91px;
+			}
+			.carousel-content {
+
+				&.container {
+					width: 100%;
+					@include breakpoint(mobile) {
+						position: absolute;
+						width: 100%;
+						top: 50%;
+						left: 50%;
+						text-align: left;
+						-webkit-transform: translate(-50%, -50%);
+						-ms-transform: translate(-50%, -50%);
+						transform: translate(-50%, -50%);
+					}
+					h1 {
+						&.display-large {
+							font-size: 57.2px;
+							line-height: 44px;
+							letter-spacing: -3.4px;
+							padding-left: 35px;
+							margin-bottom: 20px;
+							@include breakpoint(mobile) {
+								font-size: 43px;
+								line-height: 33.1px;
+								letter-spacing: -2.6px;
+								padding-left: 0;
+							}
+						}
+					}
+				}
+			}
+
+			h5 {
+				padding-left: 50px;
+				font-size: 19.1px;
+				line-height: 19.1px;
+				letter-spacing: -0.2px;
+				@include breakpoint(mobile) {
+					font-size: 17.3px;
+					line-height: 17.3px;
+					letter-spacing: -0.2px;
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+	// overwrite the global the designer shop banner css
+	.social-shop-containers{
+		img{
+			max-width:100%;
+		}
+	}
+	.store-main-carousel, .clp-main-carousel{
+		.the-designer-shop {
+			&.left{
+				margin:0px;
+			}
+		}
+	}
+	.the-designer-shop {
+		@include breakpoint(desktop){
+			margin-bottom: 49px;
+		}
+		@include breakpoint(mobile){
+			padding-bottom: 30px;
+		}
+		&.left{
+			margin: 0;
+			@include breakpoint(desktop){
+				margin: 48px 0 38px 0;
+			}
+			h1{
+				font-size: 35.8px;
+				line-height: 27.6px;
+				letter-spacing: -2.2px;           
+				@include breakpoint(desktop){
+					font-size: 47.7px;
+					line-height: 36.7px;
+					letter-spacing: -2.9px;
+				}
+			}
+			.designer-banner-text{
+				line-height: 17.3px;
+				letter-spacing: -0.2px;
+				@include breakpoint(desktop){
+					line-height: 1;
+				}
+			}
+			.shopnow{
+				display: none;
+			}
+		}
+
+		.content-container{
+			z-index: 2;
+		}
+	}
+
+	.the-designer-shop{
+		margin-top: 18px;
+		/* .img-responsive{
+			@include breakpoint(desktop) {
+				height: 252px;
+			}
+		} */
+
+		h1{
+			&.display-medium{
+				font-size: 47.7px;
+				line-height: 36.7px;
+				letter-spacing: -2.9px;
+				@include breakpoint(mobile){
+					font-size: 35.8px;
+					line-height:27.6px;
+					letter-spacing: -2.2px;
+				}
+			}
+		}
+		.designer-banner-text{
+			letter-spacing: -0.2px;
+			@include breakpoint(mobile){
+				font-size: 17.3px;
+				line-height: 17.3px;
+				letter-spacing: -0.2px;
+			}
+		}
+		h5.designer-banner-text{			
+			padding-left: 0px;
+			font-family: "SimonCircular-Book";
+		}
+		.shopnow{
+			@include breakpoint(mobile){
+				font-size: 17.3px;
+				line-height: 17.3px;
+				letter-spacing: -0.2px;
+			}
+		}
+	}
+
+	.trending-now{
+		h3{
+			border-bottom: 1px solid $gray;
+			padding-bottom: 10px;
+			margin-bottom: 30px;
+		}
+	}
+
+	.style-deals{
+		.img-responsive{
+			display: inline-block;
+			width: 170px;
+		}
+		.style-content-container{
+			@include breakpoint(desktop) {
+				min-height: 275px;
+			}
+			@include breakpoint(desktop-medium) {
+				min-height: 320px;
+			}
+		}
+		.style-container{
+			picture{
+				@include breakpoint(desktop) {
+					min-height: 90px !important;
+				}
+			}
+		}
+		h5{
+			margin: 14px 0 8px !important;
+			a {
+				line-height: 16px;
+				letter-spacing: -0.2px;
+				font-family: $SimonCircularBold;
+			}
+		}
+		.margin-btm{
+			margin-bottom: 15px;
+		}
+	}
+
+	.designer-deals{
+		margin: 60px 0;
+		picture{
+			@include breakpoint(desktop) {
+				display: inline-block;
+				margin-left: -75px;
+			}
+		}
+
+		.designer-deals-container{
+			padding-bottom: 0;
+			@include breakpoint(desktop-medium){
+				width: 59%;
+			}
+			&.designer-deals-img{
+				@include breakpoint(desktop-medium){
+					width: 41%;
+				}
+			}
+			h2{
+				line-height: 33.1px;
+				letter-spacing: -1px;
+				@include breakpoint(desktop-medium){
+					margin-top: 10px;
+				}
+			}
+			h6{
+				@include breakpoint(desktop) {
+					margin-top: 34px;
+				}
+				@include breakpoint(desktop-medium){
+					margin-top: 0;
+					margin-left: 0;
+				}
+			}
+
+			span{
+				a{
+					font-size: 16px;
+					line-height: 16px;
+					letter-spacing: -0.2px;
+					color: $black;
+					font-family: $SimonCircularBold;
+					margin-left: 31px;
+					margin-top: 30px;
+					@include breakpoint(desktop){
+						float: left;
+					}
+					span{
+						margin-left: 8px;
+						font-size: 23px;
+					}
+				}
+			}
+		}
+
+	}
+	
+	
+	
+		
+		
+	// Social Shop
+	.social-shop {
+	    background-color: $gray-light;
+	    padding: 70px 0;
+	    @include breakpoint(mobile) {
+	        padding: 40px 0;
+	    }
+	
+	    .social-shop-containers {
+	        a{
+	            display: block;
+	        }
+	        @include breakpoint(mobile) {
+	            .social-shop-content{
+	                max-width: 302px;
+	                padding: 0 15px;
+	                
+	                &:last-child{
+	                    padding-right: 0;
+	                }
+	            }
+	            #carousalFooter{
+	                .slick-list{
+	                    margin-bottom: 0;
+	                }
+	                .slick-list,
+	                .slick-track{
+	                    max-height: 274px;
+	                }
+	            }
+	        }
+	
+	        >.main-heading {
+	            font-family: SimonCircular-Bold;
+	        }
+	        >.sub-heading {
+	            font-family: SimonCircular-Light;
+	            margin-bottom: 7px;
+	        }
+	        >p {
+	            font-family: SimonCircular-Book;
+	            >a {
+	                color: $black;
+	                font-family: SimonCircular-Book;
+	                text-decoration: underline;
+	                &:hover {
+	                    text-decoration: none;
+	                }
+	            }
+	        }
+	        >.btn {
+	            margin-top: 19px;
+	            font-size: 13.3px;
+	            font-family: SimonCircular-Bold;
+	            letter-spacing: 0.7px;
+	            width: 172px;
+	            margin-left: 102px;
+	            @include breakpoint(mobile) {
+	            	margin-left: auto;
+    				margin-right: auto;
+	            }
+	        }
+	
+	        &.social-shop-content {
+	            @include breakpoint(mobile) {
+	                text-align: center;
+	                margin-top: 40px;
+	            }
+	        }
+	    }
+	}
+		
+		
+	
+	
+}
