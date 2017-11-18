@@ -17,7 +17,7 @@ class Athlete extends Person{
 
     aboutMe(){
         console.log(`You're ${this.name} and your age is ${this.age} and golds ${this.gold}`);
-     }
+	}
 }
 
 var a = new Athlete("Bolt", 35, 15);

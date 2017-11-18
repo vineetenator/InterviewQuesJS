@@ -6,7 +6,7 @@ class counter{
             return c++;
         }
         this.curr = () =>{
-        return c;
+			return c;
         }
     }
 
@@ -14,7 +14,7 @@ class counter{
         c--; // ReferenceError: c is not defined when c is defined as variable
     }
 
-    // Here we can't cant define a function with function or this key word
+    // Here we can't cant define a function with function or this key word i.e.
     // function sub(){} -- error
     // this.sub = function(){} --  error
     // this.sub = () =>{} -- error

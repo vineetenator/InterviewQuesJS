@@ -2,7 +2,7 @@ function curry(func){
   var cb = function(...args) {
     if (args.length >= add.length) return func(...args);
     return function(...args2) {
-      return cb(...[...args, ...args2]);
+		return cb(...[...args, ...args2]);
     };
   };
   return cb;
