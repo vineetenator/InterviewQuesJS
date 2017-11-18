@@ -1,0 +1,38 @@
+POD - plain old data
+https://msdn.microsoft.com/en-us/library/dn956974.aspx
+Const
+Volatile
+Storage Class
+Namespace scope; class scope
+http://www.studytonight.com/cpp/functions-in-cpp
+
+
+http://www.geeksforgeeks.org/references-in-c/ 3-5
+http://quiz.geeksforgeeks.org/operator-overloading-c/
+Assignment operator Compiler automatically creates
+Conversion Operator Compiler automatically creates
+copy construtor Compiler automatically creates
+http://www.geeksforgeeks.org/multiple-inheritance-in-c/
+
+
+Serialization is the process of converting an object into a stream of bytes in order to store the object or transmit it to memory, a database, or a file. 
+Its main purpose is to save the state of an object in order to be able to recreate it when needed. The reverse process is called deserialization.
+
+
+Q: Search key in 2 given array and return 1 if found in one. return 2 if found in 2nd.
+Q: Balanced open and close of brackets. <a>{}[]0(p)
+Q: Copy a given string in reverse order into other string.
+Q: Tokenize string based on the delimiters which are (), [] and {} which always occurs in pairs. 
+	if any two consecutive "(" means escaping, that is "((" is actually output char "(". It's not part of the delimiter. Similar to ")", "{", "}", "[", "]". Since the "))" outpus ")". 
+	abc(edf)hij{klmn}opq[rst]uvw
+	A: abc edf hij klmn opq rst uvw
+	abc(e))df)
+	A: abc e)df
+Q: Tokenize
+	<a:cb>:"dfddff:gh":[mjddl:]
+	My delimiter is :, and entries inside <>, "" or [] should not be split. The output should be
+	A: 
+	a:cb
+	dfddff:gh
+	mjddl:
+Q: 

@@ -1,0 +1,12 @@
+What is a closure?
+http://javascriptissexy.com/understand-javascript-closures-with-ease/
+A closure is an inner function that has access to the outer (enclosing) function’s variables—scope chain.
+closure has three scope chains:
+	its own scope, 
+	access to the outer function’s variables & parameters, and 
+	access to the global variables.
+Closures’ Rules and Side Effects
+1. Closures have access to the outer function’s variable even after the outer function returns: Scope capturing.
+2. Closures store references to the outer function’s variables: Scope capturing.
+3. Closures Gone Awry: 
+	Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop

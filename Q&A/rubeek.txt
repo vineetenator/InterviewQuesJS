@@ -1,0 +1,78 @@
+/*
+
+Problem : 1
+=================================================================================================
+
+In the given xml file named Problem.gpx, find the following making assumptions based on SI units:
+
+A. Total Distance
+B. Max speed
+C. Average speed
+D. Elevation gained (high-low elevation)
+E. Moving time (Its the time when the subject was moving i.e. not sitting idle)
+F. Total time elapsed
+
+The xml file contains the timestamp, location and elevation datapoints.
+
+Link to test data: https://dl.dropboxusercontent.com/s/8nvqnasci6l76nz/Problem.gpx?dl=0
+
+*/
+
+/*
+Problem : 2
+=========================================================================================================
+
+Write a program to find pairs of positive integers (A,B) whose sum is equal to the input number N (N < 10 power 6).
+
+The conditions to be satisfied by A & B are:
+● A has at least two digits and starts with a non-zero digit 
+● B always has one digit less than A 
+● B can start with 0 
+● B is obtained from A by leaving out one digit.
+
+The output should also indicate the number of such pairs. For example, if we input 1002 to the program, the output should be as follows: 
+
+4 pairs found: 
+906 + 96 = 1002 
+911 + 91 = 1002 
+951 + 51 = 1002 
+1001 + 001 = 1002
+
+--------------------------------------------------------------------------
+
+Assuming input is provided in testdata.in with the following contents:
+2
+1002
+11
+
+Line 1: Number of test cases
+Line 2 Onwards: The Number itself
+
+Print the output in the following format.
+---------------------------------------------------------------------------
+TEST #1
+4 pairs found
+906 + 96 = 1002
+911 + 91 = 1002
+951 + 51 = 1002
+TEST #2
+1 pair found
+10 + 1 = 11
+
+Link to test file: https://dl.dropboxusercontent.com/s/fb85x5m8ycenpgb/testdata.in?dl=
+
+*/
+
+/*
+Problem : 3
+===============================================================================================================
+
+Use Google / OpenStreet map APIs to overlay information from Problem 1 on a map.
+
+Use data from following file to create the overlay.
+
+https://dl.dropboxusercontent.com/s/8nvqnasci6l76nz/Problem.gpx?dl=0
+
+Email : ajeet@rupeek.com
+
+*/

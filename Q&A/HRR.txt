@@ -1,0 +1,39 @@
+gradle clean build
+
+white label app = product or service produced by one company (the producer) that other companies (the marketers) rebrand to make it appear as if they had made it.
+ABO4
+MOIL LTD
+techcareers@peopleinteractive.in- shaadi.com
+ABB1105-20-1145
+
+http://ejohn.org/apps/learn/#23
+var ninja = { 
+  yell: function(n){ 
+    return n > 0 ? arguments.callee(n-1) + "a" : "hiy"; 
+  } 
+}; 
+assert( ninja.yell(4) == "hiyaaaa", "arguments.callee is the function itself." );
+
+learning and career progression is a big motivation to continue in a job
+
+Asynchronous & Synchronous web pages and functionalities onto web pages. Give examples.
+Brush up on your HTML/CSS - layouts etc.
+If you are writing jQuery in your resume, be prepared to answer detailed questions on the topic.
+jQuery is not enough - you need to know JavaScript very well. Be very good in JS. You will be asked to write code in JS.
+For WDE2 - brush up on your architecture/design skills - You may be asked to write - lets say some small component in a web page - using HTML/CSS/JS/jQuery - How do you design it? How do you structure the code? How to do you break it down into simple reusable components?
+Web security.
+Basics of Computer Networks and Internet (If you don't know what HTTP is, you are probably not WDE enough for Amazon).
+Web performance - again, very important at Amazon.
+
+What is your Stength? tech & non tech
+What is your Weekness? tech & non tech
+
+What are three positive things your last boss would say about you? positive attitude towards, responsible, Good Team player, pressure bearer
+Tell me about something that's not on your resume? Multi-tasking, punctual, dedicated to work, Think positive, work with targeted goal, Good at micro manage own task, easily mingle, 
+If you could start your career over again, what would you do differently? Infact, i would rather concentrate and start the same career with difference, and try not to make past mistakes, will rather win win situation, instead of making new career with new mistakes growth will be on toss.
+If you are given an opportunity to be paid without doing work what will be your answer? I will accept the paid amount for no work. Same time I will passionately find new work to do. So I will get double money and can complete my desired and duty.
+How will you describe the difference between red and green color to a color blind person? First i will explain what is color, then i will say that if some one close their eyes they can usually feel black color, same way there are other many colors too like green which is nature color and red is blood color. or  most important to understand colors(emotions)or can ask to touch leaves and 
+What will be your reaction on seeing a tiger in front of you?
+If you are a recruiter whom you will hire, and why?
+Tell me something about yourself & family? qualification, experience and education. Over all answer should include the area of family background, qualification, experience, interests, goel, hobbies any other other areas which a candidate want to discuss but in a short and defined way. cos gernally this question asked to know the candidates confidence, verbal communication / presentation.  Interviewer not into keen interest to know the name, and occupation details of the family menmbers.
+I am santosh gopale I am from anavi mumbai , I have complited B com from pune univercity . i have 10 year experiance in accounting, auditing, MIS reporting,taxation & Analysis. My family is small . i have 1 brother he is working in pvt. company. my mother is housewife.i like cooking, & travlling
